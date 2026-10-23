@@ -1,0 +1,279 @@
+<!doctype html> <!--DOCTYPE: avisa ao navegador que este arquivo é HTML5.-->
+<html lang="pt-br" class="has-navbar-fixed-top"> <!-- lang="pt-br": informa o idioma da página. 
+    class="has-navbar-fixed-top": classe do Bulma que adiciona um padding no topo da página do tamanho da navbar.-->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Viewport: faz a página se adaptar à largura da tela em celulares. -->
+        <link rel="stylesheet" href="../CSS/pokedex.css" />
+        <link rel="icon" type="image/svg+xml" href="../imagens/favicon.svg">  <!-- Favicon: o ícone pequeno que aparece na aba do navegador. -->
+        <title>Pokédex</title>  <!-- Título exibido na aba do navegador e nos resultados de busca. -->
+    </head>
+    <body>
+        <!-- ====================
+             BARRA DE NAVEGAÇÃO 
+             ==================== -->
+        <nav class="navbar is-fixed-top is-light">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="./index.html.">  <!-- Logo clicável. È um link que leva para o index -->
+                    <img src="../imagens/logo.svg" alt="Poképédia"> <!-- O alt é exibido caso a imagem não carregue. -->
+                </a>
+
+                <div class="navbar-burger js-burger" data-target="navbarExampleTransparentExample">
+                     <!-- Botão burguer (três barrinhas) aparece só em telas pequenas. -->
+                     <!-- js-burger: classe usada para o JavaScript localizar o botão -->
+                     <!-- data-target: id do menu que será aberto/fechado ao clicar. -->
+                                
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <!-- As 4 <span> vazias são desenhadas pelo Bulma como as barrinhas do ícone. -->
+                </div>
+            </div>
+
+            <!-- menu: em telas grandes aparece na horizontal; em telas pequenas fica escondido até clicar no hambúrguer. Por enquanto não funciona -->
+            <div id="navbarExampleTransparentExample" class="navbar-menu"> 
+                <div class="navbar-start">  <!-- agrupa os itens alinhados à esquerda. -->
+                    <!-- Links para as demais páginas do site. -->
+                    <a class="navbar-item" href="./index.html"> Início </a>
+                    <a class="navbar-item" href="./pokedex.html"> Pokédex </a>
+                    <a class="navbar-item" href="./tipos.html"> Tipos </a>
+                    <a class="navbar-item" href="./ginasio.html"> Ginásio </a>
+                    <a class="navbar-item" href="./contribuir.html"> Contribuir </a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- ====================
+             CABEÇALHO DA PÁGINA
+             ==================== -->
+
+        <!-- <header> é a tag para o cabeçalho de uma seção. -->
+        <header id="topo" class="hero is-warning is-small"> 
+            <!-- hero: bloco (largura total). is-warning:  cor amarela. is-small: menos espaçamento. -->
+            <section class="hero-body">
+                <h1 class="title">Pokédex</h1> <!-- <h1> é o título principal da página -->
+                <p class="subtitle">Todos os 151 Pokémon da 1ª geração, de Bulbasaur a Mew.</p>
+                <!-- subtitle: estilo de subtítulo do Bulma -->
+            </section>
+        </header>
+
+        <!-- =====================
+             CONTEÚDO PRINCIPAL
+             ===================== -->
+
+        <main class="section">
+            <section id="introducao"> <!-- Seção de introdução-->
+                <h2 class="title is-4">Explore Kanto</h2> <!-- aplica o estilo de título com tamanho nível 4 do Bulma.-->
+                <p>
+                    Esta é a lista completa dos <strong>151 Pokémon</strong> apresentados em <em>Pokémon Red</em> e <em>Pokémon Blue</em>. Cada card mostra o <strong>número</strong> na Pokédex,
+                    o <strong>nome</strong> e os <strong>tipos</strong> do Pokémon. Use os atalhos abaixo para ir direto a uma faixa da lista.
+                </p>
+                <!-- <strong> = destaque de importância (negrito). <em> = ênfase (itálico). -->
+            </section>
+
+            <!-- ===================
+                 ATALHOS DA POKÉDEX
+                 =================== -->
+
+            <nav class="tabs is-centered is-boxed" aria-label="Atalhos da Pokédex">
+            <!-- aria-label: dá um nome ao <nav> e diferencia do <nav> do menu.
+            -->
+                <ul>
+                <!-- href="#faixa-1": link de âncora, rola até o elemento com id="faixa-1" -->
+                    <li><a href="#faixa-1">#001 a #050</a></li>
+                    <li><a href="#faixa-2">#051 a #100</a></li>
+                    <li><a href="#faixa-3">#101 a #151</a></li>
+                </ul>
+            </nav>
+
+            <!-- ==============================
+                 SEÇÕES DAS FAIXAS DE POKÉMON
+                 ============================== -->
+
+            <!-- São os destinos das abas de atalho criadas -->
+            <section id="faixa-1">
+                <!-- (cards dos Pokémon de #001 a #050 entram aqui) -->
+                <h2 class="title is-4">Pokémon #001 a #050</h2> </section>
+                <!-- (Lista de Pokémon) -->
+                <ul class="lista-pokemon">
+                    <li>
+                        <!-- (Bulbasaur) -->
+                        <article class="card card-pokemon" id="bulbasaur">
+                            <figure class="card-image">
+                                <!-- (Imagem dos arquivos) -->
+                                <img src="..\imagens\bulbasaur.png" alt="Ilustração de Bulbasaur" width="150" height="150" loading="lazy" />
+                            </figure>
+                            <header class="card-content">
+                                <!-- (Informações do Pokémon) -->
+                                <p class="numero">#001</p>
+                                <h3 class="title is-5">Bulbasaur</h3>
+                            </header>
+                            <ul class="tipos" aria-label="Tipos de Bulbasaur">
+                                <!-- (Tipos do Pokémon) -->
+                                <li class="tag tipo-planta">Planta</li>
+                                <li class="tag tipo-veneno">Veneno</li>
+                            </ul>
+                        </article>
+                    </li>
+                    <li>
+                    <!-- (Ivysaur) -->
+                    <article class="card card-pokemon" id="Ivysaur">
+                            <figure class="card-image">
+                                <!-- (Imagem dos arquivos) -->
+                                <img src="..\imagens\ivysaur.png" alt="Ilustração de Ivysaur" width="150" height="150" loading="lazy" />
+                            </figure>
+                            <header class="card-content">
+                                <!-- (Informações do Pokémon) -->
+                                <p class="numero">#002</p>
+                                <h3 class="title is-5">Ivysaur</h3>
+                            </header>
+                            <ul class="tipos" aria-label="Tipos de ivysaur">
+                                <!-- (Tipos do Pokémon) -->
+                                <li class="tag tipo-planta">Planta</li>
+                                <li class="tag tipo-veneno">Veneno</li>
+                            </ul>
+                        </article>
+                    </li>
+                    <li>
+                        <!-- (Venusaur) -->
+                        <article class="card card-pokemon" id="Venusaur">
+                            <figure class="card-image">
+                                <!-- (Imagem dos arquivos) -->
+                                <img src="../imagens/venusaur.png" alt="Ilustração de Venusaur" width="150" height="150" loading="lazy" />
+                            </figure>
+                            <header class="card-content">
+                                <!-- (Informações do Pokémon) -->
+                                <p class="numero">#003</p>
+                                <h3 class="title is-5">Venusaur</h3>
+                            </header>
+                            <ul class="tipos" aria-label="Tipos de Venusaur">
+                                <!-- (Tipos do Pokémon) -->
+                                <li class="tag tipo-planta">Planta</li>
+                                <li class="tag tipo-veneno">Veneno</li>
+                            </ul>
+                        </article>
+                    </li>
+                    <li>
+                        <!-- (Charmander) -->
+                         <article class="card card-pokemon" id="Charmander">
+                            <figure class="card-image">
+                                <img src="../imagens/charmander.png" alt="Ilustração de Charmander" width="150" height="150" loading="lazy" />
+                            </figure>
+                            <header class="card-content">
+                                <!-- (Imagem dos arquivos) -->
+                                <p class="numero">#004</p>
+                                <h3 class="title is-5">Charmander</h3>
+                            </header>
+                            <ul class="tipos" aria-label="Tipos de Charmander">
+                                <!-- (Tipos do Pokémon) -->
+                                <li class="tag tipo-fogo">Fogo</li>
+                            </ul>
+                        </article>
+                    </li>
+                    <li>
+                        <!-- (Charmeleon) -->
+                        <article class="card card-pokemon" id="Charmeleon">
+                            <figure class="card-image">
+                                <img src="../imagens/charmeleon.png" alt="Ilustração de Charmeleon" width="150" height="150" loading="lazy" />
+                            </figure>
+                            <header class="card-content">
+                                <!-- (Imagem dos arquivos) -->
+                                <p class="numero">#005</p>
+                                <h3 class="title is-5">Charmeleon</h3>
+                            </header>
+                            <!-- (Tipos do Pokémon) -->
+                            <ul class="tipos" aria-label="Tipos de Charmeleon">
+                                <li class="tag tipo-fogo">Fogo</li>
+                            </ul>
+                        </article>
+                    </li>
+                    <li>
+                        <!-- (Charizard) -->
+                        <article class="card card-pokemon" id="Charizard">
+                            <figure class="card-image">
+                                <img src="../imagens/charizard.png" alt="Ilustração de Charizard" width="150" height="150" loading="lazy" />
+                            </figure>
+                            <header class="card-content">
+                                <!-- (Imagem dos arquivos) -->
+                                <p class="numero">#006</p>
+                                <h3 class="title is-5">Charizard</h3>
+                            </header>
+                            <ul class="tipos" aria-label="Tipos de Charizard">
+                                <!-- (Tipos do Pokémon) -->
+                                <li class="tag tipo-fogo">Fogo</li>
+                                <li class="tag tipo-voador">Voador</li>
+                            </ul>
+                        </article>
+                    </li>
+                    <li>
+                        <!-- (Squirtle) -->
+                        <article class="card card-pokemon" id="Squirtle">
+                            <figure class="card-image">
+                                <img src="../imagens/squirtle.png" alt="Ilustração de Squirtle" width="150" height="150" loading="lazy" />
+                            </figure>
+                            <header class="card-content">
+                                <!-- (Imagem dos arquivos) -->
+                                <p class="numero">#007</p>
+                                <h3 class="title is-5">Squirtle</h3>
+                            </header>
+                            <ul class="tipos" aria-label="Tipos de Squirtle">
+                                <!-- (Tipos do Pokémon) -->
+                                <li class="tag tipo-agua">Água</li>
+                            </ul>
+                        </article>
+                    </li>
+                    <li>
+                        <!-- (Wartortle) -->
+                        <article class="card card-pokemon" id="Wartortle">
+                            <figure class="card-image">
+                                <img src="../imagens/wartortle.png" alt="Ilustração de Wartortle" width="150" height="150" loading="lazy" />
+                            </figure>
+                            <header class="card-content">
+                                <!-- (Imagem dos arquivos) -->
+                                <p class="numero">#008</p>
+                                <h3 class="title is-5">Wartortle</h3>
+                            </header>
+                            <!-- (Tipos do Pokémon) -->
+                            <ul class="tipos" aria-label="Tipos de Wartortle">
+                                <li class="tag tipo-agua">Água</li>
+                            </ul>
+                        </article>
+                    </li>
+                    <li>
+            <section id="faixa-2">
+                 <!-- (cards dos Pokémon de #051 a #100 entram aqui) -->
+                <h2 class="title is-4">Pokémon #051 a #100</h2> </section>
+ 
+            <section id="faixa-3">
+                 <!-- (cards dos Pokémon de #101 a #151 entram aqui) -->
+                <h2 class="title is-4">Pokémon #101 a #151</h2> </section>
+
+        </main>
+
+        <!-- ========
+             RODAPÉ
+             ======== -->
+
+         <footer class="footer"> <!-- Bloco de apresentação do projeto. -->
+            <section>
+                <h2 class="title is-5">Poképédia</h2>
+                <p>Pokédex da 1ª geração, feita para a disciplina de Introdução a Web.</p>
+            </section>
+ 
+            <address>Feito por: Marcos Gabriel Carneiro da Silva, Raul Kimio Cavalcante Maeda, Thales Schettini de Moraes</address>
+            <!-- <address> é a tag para informações de contato/autoria de quem criou a página. -->
+            <p>
+                <small> Pokémon e seus personagens são marcas da Nintendo, Game Freak e The Pokémon Company. Projeto sem fins lucrativos, feito para fins educacionais. </small>
+                <!--<small> é a tag semântica para "letras miúdas" -->
+            </p>
+ 
+            <p>
+                <small>&copy; 2026 Poképédia. Todos os direitos reservados.</small>
+             <!-- &copy exibe © -->
+            </p>
+ 
+            <a href="#topo">Voltar ao topo</a>  <!-- Link que leva ao inicio" -->
+        </footer>
+    </body>
+</html>
