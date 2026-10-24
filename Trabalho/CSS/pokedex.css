@@ -1,128 +1,170 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
 
-/* Âncoras: evita que a navbar fixa esconda o alvo do link */
+/* =================
+    PALETA DE CORES
+   ================= */
+
+/*   azul-marinho  #19375f  -> títulos e banner
+     azul          #2756a6  -> detalhes, bordas de destaque e botões de atalho
+     amarelo       #ffdd57  -> título do banner e do rodapé
+     fundo claro   #f2f6fc  -> fundo das seções alternadas
+     texto         #263550  -> parágrafos
+     rodapé        #0c1c38  -> fundo escuro do rodapé */
+
+/* ========================
+    ÂNCORAS E ROLAGEM SUAVE
+   ======================== */
+
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;  /* Ao clicar em um link de âncora, a página desliza até o destino em vez de "pular". */
 }
 
 [id] {
-    scroll-margin-top: 4.5rem;
+    scroll-margin-top: 4.5rem; /* Qualquer elemento que tenha id, é fixa no topo, ela cobriria o título/card de destino. 
+    Esta margem de rolagem faz o navegador parar um pouco antes, deixando o destino visível. */
 }
 
-/* Banner principal */
+/* ==================
+    BANNER PRINCIPAL
+   ================== */
 #topo {
-    background-color: #19375f;
+    background-color: #19375f; /* Fundo azul-marinho. */
 }
 
 #topo .title {
-    color: #ffdd57;
+    color: #ffdd57; /* Título "Pokédex" em amarelo. */
 }
 
 #topo .subtitle {
-    color: #ffffff;
+    color: #ffffff; /* Frase abaixo do título em branco, para contrastar com o azul. */
 }
 
-/* Conteúdo principal: seções de largura total, alternando o fundo como no index */
+/* =======================
+    ESTRUTURA DO CONTEÚDO
+   ======================= */
+
 main.section {
-    padding: 0;
+    padding: 0; /* O Bulma coloca espaçamento interno na classe .section. Aqui é zerado
+                   porque o espaçamento agora é controlado por cada <section> abaixo. */
 }
 
 main > section {
     display: grid;
-    /* laterais flexíveis + coluna central de até 56rem: o conteúdo fica centralizado
-       e sobra espaço nas laterais (útil para notícias, anúncios, etc.) */
     grid-template-columns: minmax(1.5rem, 1fr) minmax(0, 56rem) minmax(1.5rem, 1fr);
-    align-content: start;
-    row-gap: 1.25rem;
-    padding: 3rem 0;
+                        /* Cada seção vira uma grade (Grid) de 3 colunas:
+                             1ª coluna: lateral esquerda (vazia)
+                             2ª coluna: CONTEÚDO, com no máximo 56rem de largura
+                             3ª coluna: lateral direita (vazia) minmax(1.5rem, 1fr): as laterais dividem o espaço que sobra e nunca ficam
+                            menores que 1,5rem (evita o conteúdo colar na borda em telas pequenas).
+                            minmax(0, 56rem): a coluna central cresce até 56rem e encolhe se precisar. */
+    align-content: start; /* Mantém as linhas da grade coladas no topo da seção. */
+    row-gap: 1.25rem; /* Espaço vertical de 1,25rem entre os elementos da seção (título, lista, atalhos). */
+    padding: 3rem 0; /* Espaço interno em cima e embaixo; nas laterais é 0 porque as colunas
+                        laterais da grade já cuidam disso. */
 }
 
 main > section > * {
-    grid-column: 2;
+    grid-column: 2; /* Todo filho direto da seção (título, parágrafo, lista, atalhos) vai para a
+                       coluna 2, a central. As colunas 1 e 3 ficam livres. */
 }
 
 #introducao {
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.5rem; /* Menos espaço embaixo, para as abas de atalho ficarem perto do texto. */
     background-color: #ffffff;
 }
 
 #faixa-1,
 #faixa-3 {
-    background-color: #f2f6fc;
+    background-color: #f2f6fc; /* Faixas 1 e 3: fundo azul bem claro. */
 }
 
 #faixa-2 {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Faixa 2: fundo branco. Assim as faixas alternam claro/branco/claro. */
 }
 
+/* =======================
+    TEXTOS DAS SEÇÕES
+   ======================= */
+
 main .title {
-    color: #19375f;
+    color: #19375f; /* Todos os títulos dentro do <main> (e dos cards) em azul-marinho. */
 }
 
 main p {
-    color: #263550;
+    color: #263550; /* Parágrafos com cor de texto escura e linhas mais espaçadas (mais fácil de ler). */
     line-height: 1.6;
 }
 
 #introducao strong,
 #introducao em {
-    color: #19375f;
+    color: #19375f; /* Destaques (<strong> e <em>) do texto de introdução em azul-marinho */
 }
 
 section[id^="faixa-"] > h2.title {
     font-size: 2rem;
-    text-align: center;
+    text-align: center; /* Seções cujo id começa com "faixa-" (faixa-1, 2 e 3).
+                           Aumenta o título de cada faixa e o centraliza. */
 }
 
-/* Abas de atalho do topo */
+/* ===========================
+   6. ABAS DE ATALHO DO TOPO 
+   =========================== */
+
 main > nav.tabs:not(:last-child) {
-    margin-bottom: 0;
-    padding-bottom: 2rem;
+    margin-bottom: 0; /* Zera a margem inferior padrão do Bulma e usa espaço interno no lugar. */
+    padding-bottom: 2rem; /* Fundo branco, para continuar o fundo da introdução. */
     background-color: #ffffff;
 }
 
 .tabs ul {
-    border-bottom-color: #d8e3f3;
+    border-bottom-color: #d8e3f3; /* Linha fina azulada embaixo das abas. */
 }
 
 .tabs a {
     color: #19375f;
-    border-bottom-color: #d8e3f3;
+    border-bottom-color: #d8e3f3; /* Texto das abas em azul-marinho. */
 }
 
 .tabs.is-boxed a:hover {
-    background-color: #e8effb;
+    background-color: #e8effb; /* Ao passar o mouse, a aba ganha um fundo azul-claro. */
     border-bottom-color: #d8e3f3;
 }
 
-/* Grade: 3 Pokémon por fileira (as evoluções ficam na mesma linha) */
+/* =====================
+   7. GRADE DE POKÉMON
+   ===================== */
 .lista-pokemon {
-    display: grid;
+    display: grid; /* Grade de exatamente 3 colunas, para as evoluções ficarem na mesma fileira. */
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.25rem;
+    gap: 1.25rem; /* Espaço entre os cards, na horizontal e na vertical. */
 }
 
 .lista-pokemon > li {
-    display: flex;
+    display: flex; /* Cada <li> vira um contêiner flexível para o card dentro dele esticar e
+                    ocupar toda a altura da fileira. Assim os 3 cards da linha têm a mesma altura. */
 }
 
-/* Card de cada Pokémon (mesmo formato dos cards do index) */
+/* =====================
+   8. CARD DO POKÉMON
+   ===================== */
+
 .card-pokemon {
-    display: flex;
-    flex: 1;
+    display: flex; /* Organiza o conteúdo do card em coluna: imagem, depois nome, depois tipos. */
+    flex: 1; /* Faz o card ocupar toda a largura/altura do <li>. */
     flex-direction: column;
-    overflow: hidden;
-    background-color: #ffffff;
+    overflow: hidden; /* Corta o que passar da borda arredondada. */
+    background-color: #ffffff;  /* Aparência igual aos cards do index: fundo branco, borda fina,
+                                   cantos de 12px e sombra suave azulada. */
     border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(25, 55, 95, 0.1);
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(25, 55, 95, 0.1); /* Faz o movimento e a sombra do :hover acontecerem de forma suave (0,15s). */
     transition:
         transform 0.15s ease,
         box-shadow 0.15s ease;
 }
 
 .card-pokemon:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px); /* Ao passar o mouse, o card sobe 4px e a sombra aumenta. */
     box-shadow: 0 0.75rem 1.25rem rgba(25, 55, 95, 0.18);
 }
 
@@ -135,33 +177,35 @@ main > nav.tabs:not(:last-child) {
 
 /* Faixa colorida atrás da imagem */
 .card-pokemon .card-image {
-    display: grid;
+    display: grid; /* Grade com o conteúdo (a imagem) centralizado na horizontal e na vertical. */
     place-items: center;
     aspect-ratio: 5 / 4;
-    padding: 1rem;
+    padding: 1rem; /* Espaço interno entre a borda da faixa e a imagem. */
     background-color: #e8effb;
 }
 
 .card-pokemon .card-image img {
     width: 100%;
-    max-width: 200px;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: contain;
+    max-width: 200px; /* A imagem ocupa a largura disponível, mas nunca passa de 200px. */
+    height: auto; /* Altura automática, mantendo a proporção da imagem original. */
+    aspect-ratio: 1 / 1; * Reserva uma área quadrada para a imagem, evitando "pulos" no layout enquanto ela carrega. */
+    object-fit: contain; /* Mostra a imagem inteira dentro da área, sem cortar nem distorcer. */
 }
 
-.card-pokemon .card-content {
+.card-pokemon .card-content { /* ---- Textos do card ---- */
     flex: 1;
     padding: 1rem 1.25rem 0.5rem;
 }
 
-.card-pokemon .numero {
+.card-pokemon .numero { /* Número do Pokémon (#001): pequeno, em negrito e em cinza-azulado. */
     font-size: 0.85rem;
     font-weight: bold;
     color: #53647e;
 }
 
-/* Cor da faixa conforme o PRIMEIRO tipo do Pokémon */
+/* ======================================
+     COR DA FAIXA DO CARD CONFORME O TIPO 
+   =======================================*/
 .card-pokemon:has(.tipos > li:first-child.tipo-normal) .card-image   { background-color: #eceae1; }
 .card-pokemon:has(.tipos > li:first-child.tipo-fogo) .card-image     { background-color: #ffd8d2; }
 .card-pokemon:has(.tipos > li:first-child.tipo-agua) .card-image     { background-color: #d7efff; }
@@ -178,14 +222,17 @@ main > nav.tabs:not(:last-child) {
 .card-pokemon:has(.tipos > li:first-child.tipo-fantasma) .card-image { background-color: #dcd3ea; }
 .card-pokemon:has(.tipos > li:first-child.tipo-dragao) .card-image   { background-color: #d9ccfa; }
 
-/* Etiquetas de tipo */
-.tipos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.35rem;
-    padding: 0 1.25rem 1.25rem;
-}
+/* ======================
+     ETIQUETAS DE TIPO
+   ======================*/
 
+.tipos {
+    display: flex; /* As etiquetas ficam lado a lado e quebram de linha se não couberem. */
+    flex-wrap: wrap; /* Espaço entre as etiquetas. */
+    gap: 0.35rem; 
+    padding: 0 1.25rem 1.25rem; /* Espaço interno: nada em cima, 1,25rem nas laterais (alinha com o texto do card) e 1,25rem embaixo. */
+}
+/* Uma cor para cada um dos 15 tipos (as cores oficiais dos jogos) */
 .tag.tipo-normal   { background-color: #a8a878; color: #1a1a1a; }
 .tag.tipo-fogo     { background-color: #f08030; color: #1a1a1a; }
 .tag.tipo-agua     { background-color: #6890f0; color: #1a1a1a; }
@@ -202,38 +249,44 @@ main > nav.tabs:not(:last-child) {
 .tag.tipo-fantasma { background-color: #705898; color: #ffffff; }
 .tag.tipo-dragao   { background-color: #7038f8; color: #ffffff; }
 
-/* Atalhos secundários no fim de cada faixa: botões pequenos lado a lado */
+/* ==================================
+     ATALHOS NO FIM DE CADA FAIXA 
+   ================================== */
+
 .nav-faixa ul {
-    display: flex;
+    display: flex; /* Os botões ficam na mesma linha, centralizados, e quebram de linha em telas estreitas. */
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* Espaço entre os botões: 0,5rem na vertical e 0,75rem na horizontal. */
     gap: 0.5rem 0.75rem;
 }
 
 .nav-faixa a {
-    display: inline-flex;
+    display: inline-flex; /* Cada link vira uma caixa alinhada ao centro, com espaço interno. */
     align-items: center;
-    padding: 0.4rem 1rem;
+    padding: 0.4rem 1rem; /* Texto pequeno, semi-negrito, azul e sem sublinhado. */
     font-size: 0.875rem;
     font-weight: 600;
     color: #2756a6;
-    text-decoration: none;
+    text-decoration: none; /* Visual de pílula: fundo branco, borda fina azul-clara e cantos totalmente arredondados (999px). */
     background-color: #ffffff;
     border: 1px solid #c9d7ec;
     border-radius: 999px;
-    transition:
+    transition: /* Troca de cor suave ao passar o mouse. */
         background-color 0.15s ease,
         color 0.15s ease;
 }
 
 .nav-faixa a:hover,
-.nav-faixa a:focus-visible {
+.nav-faixa a:focus-visible { /* Ao passar o mouse OU ao focar com o teclado (Tab), o botão fica azul com texto branco */
     color: #ffffff;
     background-color: #2756a6;
     border-color: #2756a6;
 }
 
-/* Rodapé */
+/* ============
+    RODAPÉ
+   ============ */
+
 #rodape {
     display: grid;
     gap: 1rem;
@@ -257,54 +310,61 @@ main > nav.tabs:not(:last-child) {
     color: #b8c9e8;
 }
 
-/* Celular: continuam 3 por fileira, só com espaços e textos menores */
-@media (max-width: 600px) {
+/* =============
+    CELULAR
+   ============= */
+
+@media (max-width: 600px) { /* Cards mais próximos uns dos outros. */
     .lista-pokemon {
         gap: 0.5rem;
     }
 
-    .card-pokemon .card-image {
+    .card-pokemon .card-image { /* Menos espaço em volta da imagem. */
         padding: 0.5rem;
     }
 
-    .card-pokemon .card-content {
+    .card-pokemon .card-content { /* Menos espaço interno no texto do card. */
         padding: 0.6rem 0.6rem 0.4rem;
     }
 
-    .tipos {
+    .tipos { /* Etiquetas mais juntas e com menos espaço interno. */
         gap: 0.25rem;
         padding: 0 0.6rem 0.6rem;
     }
 
-    .card-pokemon .title {
+    .card-pokemon .title { /* Nome do Pokémon menor. */
         font-size: 0.9rem;
     }
 
-    .card-pokemon .numero {
+    .card-pokemon .numero { /* Número do Pokémon menor. */
         font-size: 0.7rem;
     }
 
-    .card-pokemon .tag {
+    .card-pokemon .tag { /* Texto das etiquetas de tipo menor. */
+
         font-size: 0.65rem;
     }
 
-    section[id^="faixa-"] > h2.title {
+    section[id^="faixa-"] > h2.title { /* Título de cada faixa menor no celular. */
         font-size: 1.5rem;
     }
 }
 
-/* Respeita quem prefere menos animação */
-@media (prefers-reduced-motion: reduce) {
+/* =====================
+    MOVIMENTO REDUZIDO
+   ===================== */
+
+@media (prefers-reduced-motion: reduce) { /* Rolagem direta, sem deslizar. */
     html {
         scroll-behavior: auto;
     }
 
     .card-pokemon,
-    .nav-faixa a {
+    .nav-faixa a { /* Sem animações de transição. */
         transition: none;
     }
 
-    .card-pokemon:hover {
+    .card-pokemon:hover { /* O card não sobe mais ao passar o mouse. */
         transform: none;
     }
 }
