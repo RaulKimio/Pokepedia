@@ -1,0 +1,14 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Pokébola em Kanto</title>
+  <desc id="desc">Ilustração simples de uma Pokébola com detalhes amarelos e azuis.</desc>
+  <circle cx="400" cy="260" r="220" fill="#2756a6"/>
+  <circle cx="400" cy="260" r="174" fill="#f7f9fe" stroke="#102346" stroke-width="18"/>
+  <path d="M226 260a174 174 0 0 1 348 0" fill="#e84b4b"/>
+  <path d="M226 260h348" fill="none" stroke="#102346" stroke-width="22"/>
+  <circle cx="400" cy="260" r="49" fill="#fff" stroke="#102346" stroke-width="16"/>
+  <circle cx="400" cy="260" r="22" fill="#ffda46"/>
+  <path d="M130 125l12 30 30 12-30 12-12 30-12-30-30-12 30-12z" fill="#ffda46"/>
+  <path d="M644 350l9 22 22 9-22 9-9 22-9-22-22-9 22-9z" fill="#ffda46"/>
+  <circle cx="640" cy="145" r="18" fill="#ffda46"/>
+  <circle cx="170" cy="390" r="12" fill="#fff" opacity=".8"/>
+</svg>
