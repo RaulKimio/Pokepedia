@@ -1,2 +1,270 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
 
+/* Cores gerais */
+body {
+    background-color: #e5ebf4;
+    color: #263550;
+}
+
+/* Banner da página */
+.gym-hero {
+    background-color: #19375f;
+    color: #ffffff;
+}
+
+.gym-hero .hero-body {
+    padding: 3rem 1.5rem;
+}
+
+.gym-eyebrow {
+    color: #ffdd57;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+}
+
+.gym-hero h1 {
+    margin-bottom: 1.5rem;
+    color: #ffdd57;
+    font-size: 2.5rem;
+}
+
+.gym-hero p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.gym-hero .gym-lead {
+    max-width: 540px;
+    color: #e1eafa;
+    font-size: 1.15rem;
+}
+
+/* Carteira de insígnias */
+.badge-case {
+    padding: 0.8rem;
+    background-color: #2756a6;
+    border: 4px solid #102346;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(5, 17, 39, 0.2);
+}
+
+.badge-case figcaption {
+    margin-bottom: 0.7rem;
+    padding: 0.6rem;
+    background-color: #102346;
+    border-radius: 8px;
+    color: #ffdd57;
+    font-weight: bold;
+    text-align: center;
+}
+
+.gym-badges {
+    display: block;
+    width: 100%;
+    max-height: 220px;
+    border: 3px solid #ffdd57;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+/* Introdução aos ginásios */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.gym-intro {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-left: 5px solid #ffdd57;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(25, 55, 95, 0.08);
+}
+
+.gym-intro h2 {
+    margin-bottom: 1rem;
+    color: #19375f;
+    font-size: 1.5rem;
+}
+
+.gym-intro p {
+    margin-bottom: 0.8rem;
+    color: #263550;
+    line-height: 1.7;
+}
+
+.gym-intro a {
+    color: #2756a6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.gym-intro a:hover {
+    text-decoration: underline;
+}
+
+/* Cartões dos oito ginásios */
+main > section:not(.gym-intro) {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(25, 55, 95, 0.08);
+    scroll-margin-top: 5rem;
+}
+
+main > section > h2 {
+    margin-bottom: 1rem;
+    color: #19375f;
+    font-size: 1.6rem;
+}
+
+main > section > img {
+    display: block;
+    width: 100%;
+    max-height: 260px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+main > section > p {
+    margin-bottom: 1.25rem;
+    color: #263550;
+    line-height: 1.7;
+}
+
+main strong {
+    color: #19375f;
+}
+
+main em {
+    color: #2756a6;
+}
+
+/* Lista dos Pokémon de cada líder */
+main article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #f2f6fc;
+    border-left: 4px solid #ffdd57;
+    border-radius: 8px;
+}
+
+main article h3 {
+    width: 100%;
+    margin-bottom: 0.75rem;
+    color: #19375f;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+main article .pokemon-card {
+    display: block;
+    width: 145px;
+    margin: 0;
+    padding: 0.7rem;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+main article .pokemon-card:hover {
+    transform: translateY(-3px);
+    border-color: #2756a6;
+    box-shadow: 0 6px 14px rgba(25, 55, 95, 0.15);
+}
+
+main article .pokemon-card:focus-visible {
+    outline: 3px solid #ffdd57;
+    outline-offset: 3px;
+}
+
+main article .pokemon-card img {
+    width: 100%;
+    height: 110px;
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: #f2f6fc;
+}
+
+main article .pokemon-card h4 {
+    margin: 0.6rem 0;
+    color: #19375f;
+    font-weight: bold;
+}
+
+main article .pokemon-card .tags {
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.tipo-pedra img, .tipo-terra img { background-color: #f3ead7 !important; }
+.tipo-agua img { background-color: #d7efff !important; }
+.tipo-psiquico img, .tipo-veneno img { background-color: #f0e4fb !important; }
+.tipo-eletrico img { background-color: #fff2b3 !important; }
+.tipo-planta img { background-color: #d8f2d0 !important; }
+.tipo-inseto img { background-color: #e4f1d2 !important; }
+.tipo-fogo img { background-color: #ffd8d2 !important; }
+
+.tag.tipo-pedra, .tag.tipo-terra { background-color: #e8dcc4; color: #604d2e; }
+.tag.tipo-agua { background-color: #d7efff; color: #145b91; }
+.tag.tipo-psiquico, .tag.tipo-veneno { background-color: #ead8f5; color: #68408a; }
+.tag.tipo-eletrico { background-color: #fff0a6; color: #705600; }
+.tag.tipo-planta { background-color: #d8f2d0; color: #28643b; }
+.tag.tipo-inseto { background-color: #e4f1d2; color: #476329; }
+.tag.tipo-fogo { background-color: #ffd8d2; color: #9c382c; }
+
+/* Rodapé */
+#rodape {
+    background-color: #0c1c38;
+    color: #dce6f5;
+}
+
+#rodape .title {
+    color: #ffdd57;
+}
+
+#rodape address {
+    color: #dce6f5;
+    font-style: normal;
+}
+
+#rodape small {
+    color: #b8c9e8;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 600px) {
+    .gym-hero .hero-body {
+        padding: 2rem 1rem;
+    }
+
+    .gym-hero h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 1.5rem 1rem;
+    }
+
+    .gym-intro,
+    main > section:not(.gym-intro) {
+        padding: 1rem;
+    }
+
+    main article .pokemon-card {
+        width: calc(50% - 0.5rem);
+    }
+}

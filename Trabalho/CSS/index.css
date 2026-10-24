@@ -1,2 +1,253 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
 
+/* Espaçamento e cores gerais das seções */
+#sobre,
+#destaques,
+#curiosidades,
+#voce-sabia,
+#abertura {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+#sobre,
+#voce-sabia {
+    background-color: #ffffff;
+}
+
+#destaques,
+#curiosidades,
+#abertura {
+    background-color: #f2f6fc;
+}
+
+#sobre .title,
+#destaques > .container > .title,
+#curiosidades .title,
+#voce-sabia .title,
+#abertura .title {
+    color: #19375f;
+}
+
+#sobre .content,
+#destaques .subtitle,
+#curiosidades,
+#voce-sabia,
+#abertura {
+    color: #263550;
+}
+
+/* Banner principal */
+#topo {
+    background-color: #19375f;
+}
+
+#topo .title {
+    color: #ffdd57;
+}
+
+#topo .subtitle {
+    color: #ffffff;
+}
+
+#topo img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+/* Apresentação da Poképédia */
+#sobre .box {
+    background-color: #e8effb;
+    border: 1px solid #d8e3f3;
+}
+
+#sobre .content strong,
+#sobre .content em {
+    color: #19375f;
+}
+
+/* Cartões dos Pokémon em destaque */
+#destaques .column {
+    display: flex;
+}
+
+#destaques .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(25, 55, 95, 0.1);
+}
+
+#destaques .card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #ffffff;
+}
+
+#destaques .card-content > .title,
+#destaques .card-content > p {
+    width: 100%;
+}
+
+#destaques .card-content > p {
+    flex: 1;
+    color: #263550;
+}
+
+#destaques .card-content .title,
+#destaques .card-content strong {
+    color: #19375f;
+}
+
+#destaques .card-content em {
+    color: #354965;
+}
+
+#destaques .card-content .button {
+    align-self: stretch;
+    margin-top: auto;
+}
+
+.pokemon-img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+}
+
+.fundo-amarelo { background-color: #fff2b3; }
+.fundo-verde { background-color: #d8f2d0; }
+.fundo-vermelho { background-color: #ffd8d2; }
+.fundo-azul { background-color: #d7efff; }
+
+/* Etiqueta Veneno do Bulbasaur */
+#destaques .columns > .column:nth-child(2) .tag.is-danger {
+    background-color: #8b5bb5;
+    color: #ffffff;
+}
+
+/* Curiosidades */
+#curiosidades .column {
+    display: flex;
+}
+
+.curiosidade-box {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid #2756a6;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(25, 55, 95, 0.07);
+}
+
+.curiosidade-numero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.8rem;
+    border-radius: 50%;
+    background-color: #2756a6;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.curiosidade-box p {
+    color: #263550;
+    line-height: 1.6;
+}
+
+.curiosidade-box strong {
+    color: #19375f;
+}
+
+/* Seção "Você sabia?" */
+#voce-sabia .column {
+    display: flex;
+}
+
+#voce-sabia .box {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid #ffdd57;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(25, 55, 95, 0.07);
+}
+
+#voce-sabia .box .title {
+    margin-bottom: 0.8rem;
+    color: #19375f;
+}
+
+#voce-sabia .box p {
+    color: #263550;
+    line-height: 1.6;
+}
+
+#voce-sabia .box strong {
+    color: #19375f;
+}
+
+/* Vídeo de abertura */
+#abertura .subtitle {
+    max-width: 760px;
+    margin: 0 auto 2rem;
+    color: #354965;
+    line-height: 1.6;
+}
+
+#abertura .box {
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #d8e3f3;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(25, 55, 95, 0.1);
+}
+
+#abertura iframe {
+    display: block;
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 8px;
+}
+
+#abertura figcaption {
+    color: #53647e;
+}
+
+#abertura strong {
+    color: #19375f;
+}
+
+/* Rodapé */
+#rodape {
+    background-color: #0c1c38;
+    color: #dce6f5;
+}
+
+#rodape .title {
+    color: #ffdd57;
+}
+
+#rodape address {
+    color: #dce6f5;
+    font-style: normal;
+}
+
+#rodape small {
+    color: #b8c9e8;
+}

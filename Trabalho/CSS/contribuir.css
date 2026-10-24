@@ -1,2 +1,21 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
 
+
+/* Rodapé do site */
+#rodape {
+    background-color: #0c1c38;
+    color: #dce6f5;
+}
+
+#rodape .title {
+    color: #ffdd57;
+}
+
+#rodape address {
+    color: #dce6f5;
+    font-style: normal;
+}
+
+#rodape small {
+    color: #b8c9e8;
+}
