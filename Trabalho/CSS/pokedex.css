@@ -188,7 +188,7 @@ main > nav.tabs:not(:last-child) {
     width: 100%;
     max-width: 200px; /* A imagem ocupa a largura disponível, mas nunca passa de 200px. */
     height: auto; /* Altura automática, mantendo a proporção da imagem original. */
-    aspect-ratio: 1 / 1; * Reserva uma área quadrada para a imagem, evitando "pulos" no layout enquanto ela carrega. */
+    aspect-ratio: 1 / 1; /* Reserva uma área quadrada para a imagem, evitando "pulos" no layout enquanto ela carrega. */
     object-fit: contain; /* Mostra a imagem inteira dentro da área, sem cortar nem distorcer. */
 }
 
