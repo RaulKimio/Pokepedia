@@ -31,6 +31,76 @@
                 </div>
             </div>
         </nav>
+        <main>
+            <header id="topo" class="hero is-warning is-small"> 
+                <section class="hero-body">
+                    <h1 class="title">Contribuir</h1>
+                    <p class="subtitle">Envie suas sugestões para contribuir com o projeto! :D</p>
+                </section>
+            </header>
+            <div id="form_container">
+                <form>
+                    <fieldset>
+                        <legend>I - SUA CONTRIBUIÇÃO</legend>
+
+                        <label for="tipo">Tipo de contribuição (Obrigatório!)</label>
+                        <select name="tipo_contribuicao" id="tipo" required>
+                            <option value="1">Adicionar conteúdo novo</option>
+                            <option value="2">Corrigir uma informação</option>
+                            <option value="3">Atualizar conteúdo existente</option>
+                            <option value="4">Sugerir imagens ou materiais</option>
+                            <option value="5" selected>Enviar uma sugestão geral</option>
+                        </select>
+
+                        <label for="titulo">Título (Obrigatório!)</label>
+                        <input id="titulo" name="titulo" type="text" maxlength="30" required>
+
+                        <label for="categoria">Categoria (Obrigatório!)</label>
+                        <select name="categoria" id="categoria" required>
+                            <option value="1">Pokémon</option>
+                            <option value="2">Tipos</option>
+                            <option value="3">Habilidades</option>
+                            <option value="4">Movimentos</option>
+                            <option value="5">Evoluções</option>
+                            <option value="6">Itens</option>
+                            <option value="7">Personagens</option>
+                            <option value="8">Jogos</option>
+                            <option value="9">Outros</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <legend>II - DETALHES</legend>
+
+                        <label for="descricao">Descrição da contribuição (Obrigatório!)</label>
+                        <textarea 
+                            id="descricao" 
+                            name="descricao" 
+                            rows="10" 
+                            cols="50"
+                            placeholder="Descreva aqui sua contribuição..."
+                            required
+                        ></textarea>
+
+                        <label for="pagina">Página relacionada</label>
+                        <input type="url" id="pagina" name="pagina_relacionada">
+
+                        <label for="ref">Fontes ou referências</label>
+                        <input type="url" id="ref" name="referencias">
+                    </fieldset>
+                    <fieldset>
+                        <legend>III - SOBRE VOCÊ</legend>
+
+                        <label for="nome">Nome ou apelido</label>
+                        <input type="text" id="nome" name="nome">
+
+                        <label for="email">E-Mail para contato</label>
+                        <input type="email" id="email" nome="email">
+                    </fieldset>
+
+                    <button type="submit">ENVIAR CONTRIBUIÇÃO</button>
+                </form>
+            </div>
+        </main>
         <!-- Rodapé -->
     <footer id="rodape" class="footer has-text-centered">
       <div class="container">
