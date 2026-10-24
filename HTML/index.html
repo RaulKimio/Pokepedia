@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="pt-br" class="has-navbar-fixed-top">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/index.css" />
+    <link rel="icon" type="image/svg+xml" href="../imagens/favicon.svg" />
+    <title>Poképédia</title>
+  </head>
+  <body>
+    <!-- INÍCIO DA NAVBAR: mantida sem alterações -->
+    <nav class="navbar is-fixed-top is-light">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="./index.html">
+          <img src="../imagens/logo.svg" alt="Poképédia" />
+        </a>
+        <div class="navbar-burger js-burger" data-target="navbarExampleTransparentExample">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="./index.html"> Início </a>
+          <a class="navbar-item" href="./pokedex.html"> Pokédex </a>
+          <a class="navbar-item" href="./tipos.html"> Tipos </a>
+          <a class="navbar-item" href="./ginasio.html"> Ginásio </a>
+          <a class="navbar-item" href="./contribuir.html"> Contribuir </a>
+        </div>
+      </div>
+    </nav>
+    <!-- FIM DA NAVBAR -->
+
+    <!-- Banner principal -->
+    <header id="topo" class="hero">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div class="column is-6">
+              <h1 class="title is-1">Poképédia</h1>
+
+              <p class="subtitle is-4">
+                Bem-vindo à Poképédia! Somos a sua pokédex mais completa sobre os Pokémon da 1ª geração.
+              </p>
+
+              <a href="./pokedex.html" class="button is-warning is-medium"> Explorar Pokédex </a>
+
+              <a href="./tipos.html" class="button is-light is-medium"> Conhecer os tipos </a>
+            </div>
+
+            <div class="column is-6">
+              <img
+                src="../imagens/banner-index.svg"
+                alt="Banner da Poképédia, sua pokédex da 1ª geração com os 151 Pokémon de Kanto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Sobre a Poképédia -->
+      <section id="sobre" class="section">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div class="column is-8">
+              <h2 class="title is-2 has-text-link">O que é a Poképédia?</h2>
+
+              <div class="content">
+                <p>
+                  A <strong>Poképédia</strong> é uma enciclopédia online dedicada aos
+                  <strong>151 Pokémon da primeira geração</strong>, apresentados ao mundo em <em>Pokémon Red</em> e
+                  <em>Pokémon Blue</em>. Aqui você encontra informações sobre tipos, evoluções, golpes e curiosidades de
+                  cada criatura da região de Kanto, de Bulbasaur a Mew, em um só lugar. Seja você um treinador veterano
+                  ou alguém que está começando a jornada agora, explore a nossa pokédex e descubra tudo sobre o seu
+                  Pokémon favorito.
+                </p>
+              </div>
+
+              <a href="./pokedex.html" class="button is-link"> Começar a explorar </a>
+            </div>
+
+            <div class="column is-4">
+              <div class="box has-text-centered">
+                <h3 class="title is-3 has-text-link">Kanto</h3>
+                <p class="title is-1">151</p>
+                <p class="subtitle is-5">Pokémon</p>
+                <span class="tag is-link">1ª Geração</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pokémon em destaque -->
+      <section id="destaques" class="section">
+        <div class="container">
+          <h2 class="title is-2 has-text-centered has-text-link">Pokémon em destaque</h2>
+
+          <p class="subtitle has-text-centered">Conheça alguns dos Pokémon mais famosos de Kanto!</p>
+
+          <div class="columns is-multiline">
+            <!-- Pikachu -->
+            <div class="column is-6-tablet is-3-desktop">
+              <article class="card">
+                <div class="card-image fundo-amarelo">
+                  <figure class="has-text-centered p-4">
+                    <img
+                      class="pokemon-img"
+                      src="../imagens/pikachu.png"
+                      alt="Pikachu, Pokémon rato amarelo com bochechas vermelhas"
+                    />
+                  </figure>
+                </div>
+
+                <div class="card-content">
+                  <h3 class="title is-4">Pikachu</h3>
+                  <span class="tag is-warning mb-3">Elétrico</span>
+
+                  <p>
+                    O <strong>Pikachu</strong> é o Pokémon mais famoso do mundo e mascote da franquia. Do tipo
+                    <em>Elétrico</em>, armazena energia nas bochechas e a libera em forma de poderosos choques quando se
+                    sente ameaçado.
+                  </p>
+
+                  <a href="./pokedex.html#pikachu" class="button is-warning is-fullwidth mt-4"> Ver mais </a>
+                </div>
+              </article>
+            </div>
+
+            <!-- Bulbasaur -->
+            <div class="column is-6-tablet is-3-desktop">
+              <article class="card">
+                <div class="card-image fundo-verde">
+                  <figure class="has-text-centered p-4">
+                    <img
+                      class="pokemon-img"
+                      src="../imagens/bulbasaur.png"
+                      alt="Bulbasaur, Pokémon verde com um bulbo nas costas"
+                    />
+                  </figure>
+                </div>
+
+                <div class="card-content">
+                  <h3 class="title is-4">Bulbasaur</h3>
+
+                  <div class="tags">
+                    <span class="tag is-success">Planta</span>
+                    <span class="tag is-danger">Veneno</span>
+                  </div>
+
+                  <p>
+                    O <strong>Bulbasaur</strong> é do tipo <em>Planta/Veneno</em> e carrega uma semente nas costas desde
+                    o nascimento. Ela cresce junto com ele, e é um ótimo inicial para quem está começando a jornada.
+                  </p>
+
+                  <a href="./pokedex.html#bulbasaur" class="button is-success is-fullwidth mt-4"> Ver mais </a>
+                </div>
+              </article>
+            </div>
+
+            <!-- Charmander -->
+            <div class="column is-6-tablet is-3-desktop">
+              <article class="card">
+                <div class="card-image fundo-vermelho">
+                  <figure class="has-text-centered p-4">
+                    <img
+                      class="pokemon-img"
+                      src="../imagens/charmander.png"
+                      alt="Charmander, Pokémon laranja com uma chama na ponta da cauda"
+                    />
+                  </figure>
+                </div>
+
+                <div class="card-content">
+                  <h3 class="title is-4">Charmander</h3>
+                  <span class="tag is-danger mb-3">Fogo</span>
+
+                  <p>
+                    O <strong>Charmander</strong> é do tipo <em>Fogo</em> e tem uma chama na ponta da cauda que indica a
+                    sua saúde e o seu humor. Corajoso e teimoso, evolui para o poderoso Charizard.
+                  </p>
+
+                  <a href="./pokedex.html#charmander" class="button is-danger is-fullwidth mt-4"> Ver mais </a>
+                </div>
+              </article>
+            </div>
+
+            <!-- Squirtle -->
+            <div class="column is-6-tablet is-3-desktop">
+              <article class="card">
+                <div class="card-image fundo-azul">
+                  <figure class="has-text-centered p-4">
+                    <img
+                      class="pokemon-img"
+                      src="../imagens/squirtle.png"
+                      alt="Squirtle, Pokémon azul com casco de tartaruga"
+                    />
+                  </figure>
+                </div>
+
+                <div class="card-content">
+                  <h3 class="title is-4">Squirtle</h3>
+                  <span class="tag is-info mb-3">Água</span>
+
+                  <p>
+                    O <strong>Squirtle</strong> é do tipo <em>Água</em> e se protege dentro do casco resistente. Dispara
+                    jatos de água precisos e é um inicial equilibrado, tanto no ataque quanto na defesa.
+                  </p>
+
+                  <a href="./pokedex.html#squirtle" class="button is-info is-fullwidth mt-4"> Ver mais </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Curiosidades -->
+      <section id="curiosidades" class="section">
+        <div class="container">
+          <h2 class="title is-2 has-text-centered has-text-link">Curiosidades da 1ª geração</h2>
+
+          <div class="columns is-multiline">
+            <div class="column is-6">
+              <div class="curiosidade-box">
+                <span class="curiosidade-numero">1</span>
+                <p>
+                  A primeira geração tem
+                  <strong>151 Pokémon</strong>, todos da região de <em>Kanto</em>, e os jogos <em>Pokémon Red</em> e
+                  <em>Green</em> foram lançados no Japão em 1996.
+                </p>
+              </div>
+            </div>
+
+            <div class="column is-6">
+              <div class="curiosidade-box">
+                <span class="curiosidade-numero">2</span>
+                <p>
+                  O <strong>Mew</strong> não estava nos planos originais: foi adicionado ao jogo quase no fim do
+                  desenvolvimento e ficou conhecido como o Pokémon "secreto".
+                </p>
+              </div>
+            </div>
+
+            <div class="column is-6">
+              <div class="curiosidade-box">
+                <span class="curiosidade-numero">3</span>
+                <p>
+                  O <strong>Mewtwo</strong> é um clone criado em laboratório a partir do DNA do Mew, e é um dos Pokémon
+                  mais poderosos da geração.
+                </p>
+              </div>
+            </div>
+
+            <div class="column is-6">
+              <div class="curiosidade-box">
+                <span class="curiosidade-numero">4</span>
+                <p>
+                  O <strong>Rhydon</strong> foi o primeiro Pokémon a ser desenhado, antes mesmo do Pikachu e dos três
+                  iniciais.
+                </p>
+              </div>
+            </div>
+
+            <div class="column is-6">
+              <div class="curiosidade-box">
+                <span class="curiosidade-numero">5</span>
+                <p>
+                  Em <em>Pokémon Yellow</em>, o Pikachu passou a seguir o treinador pelo mapa, o que o transformou de
+                  vez no mascote da franquia.
+                </p>
+              </div>
+            </div>
+
+            <div class="column is-6">
+              <div class="curiosidade-box">
+                <span class="curiosidade-numero">6</span>
+                <p>
+                  O famoso glitch
+                  <strong>MissingNo.</strong> permitia encontrar um Pokémon "bugado" e ficou lendário entre os jogadores
+                  da época.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Você sabia? -->
+      <aside id="voce-sabia" class="section">
+        <div class="container">
+          <h2 class="title is-2 has-text-centered has-text-link">Você sabia?</h2>
+
+          <div class="columns is-multiline">
+            <div class="column is-6">
+              <article class="box">
+                <h3 class="title is-5">O Charizard não é do tipo Dragão</h3>
+
+                <p>
+                  Apesar da aparência de dragão, o
+                  <strong>Charizard</strong> é do tipo <strong>Fogo/Voador</strong>. Ele só ganhou o tipo Dragão na
+                  forma Mega Charizard X, que surgiu em gerações posteriores.
+                </p>
+              </article>
+            </div>
+
+            <div class="column is-6">
+              <article class="box">
+                <h3 class="title is-5">O Pikachu quase não foi o mascote</h3>
+
+                <p>
+                  Durante o desenvolvimento, o
+                  <strong>Clefairy</strong> era cotado para ser o rosto da franquia. O
+                  <strong>Pikachu</strong>
+                  acabou escolhido por ser mais carismático e fácil de reconhecer, e o resto é história.
+                </p>
+              </article>
+            </div>
+
+            <div class="column is-6">
+              <article class="box">
+                <h3 class="title is-5">O Pokémon mais pesado da 1ª geração</h3>
+
+                <p>
+                  O <strong>Snorlax</strong> é o Pokémon mais pesado de Kanto, com cerca de <em>460 kg</em>. Ele passa a
+                  maior parte do tempo dormindo e costuma bloquear caminhos nos jogos, exigindo a
+                  <em>Poké Flauta</em> para acordá-lo.
+                </p>
+              </article>
+            </div>
+
+            <div class="column is-6">
+              <article class="box">
+                <h3 class="title is-5">O nome "Pokémon"</h3>
+
+                <p>
+                  A palavra vem da junção de duas palavras em inglês:
+                  <em>Pocket Monsters</em>, ou "monstros de bolso". A abreviação japonesa
+                  <em>Poketto Monsutā</em>
+                  deu origem ao nome que conhecemos hoje.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Abertura -->
+      <section id="abertura" class="section">
+        <div class="container">
+          <h2 class="title is-2 has-text-centered has-text-link">Relembre a abertura</h2>
+
+          <p class="subtitle has-text-centered">
+            Quem nunca cantou junto? Reveja a
+            <strong>abertura clássica</strong> de <em>Pokémon</em> em português e volte à época em que a jornada por
+            <em>Kanto</em> estava apenas começando.
+          </p>
+
+          <div class="columns is-centered">
+            <div class="column is-8">
+              <div class="box">
+                <figure>
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/-PlAg8R9TG4"
+                    title="Abertura clássica de Pokémon em português"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  >
+                  </iframe>
+
+                  <figcaption class="has-text-centered mt-3">Abertura clássica de Pokémon em português</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="rodape" class="footer has-text-centered">
+      <div class="container">
+        <section>
+          <h2 class="title is-3">Poképédia</h2>
+
+          <p>Pokédex da 1ª geração, feita para a disciplina de Introdução a Web.</p>
+        </section>
+
+        <address class="mt-4">
+          Feito por: Marcos Gabriel Carneiro da Silva, Raul Kimio Cavalcante Maeda, Thales Schettini de Moraes
+        </address>
+
+        <p class="mt-4">
+          <small>
+            Pokémon e seus personagens são marcas da Nintendo, Game Freak e The Pokémon Company. Projeto sem fins
+            lucrativos, feito para fins educacionais.
+          </small>
+        </p>
+
+        <p class="mt-3">
+          <small> &copy; 2026 Poképédia. Todos os direitos reservados. </small>
+        </p>
+
+        <a href="#topo" class="button is-warning mt-4"> Voltar ao topo </a>
+      </div>
+    </footer>
+  </body>
+</html>
