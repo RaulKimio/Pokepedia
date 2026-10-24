@@ -1,5 +1,106 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
 
+/* Âncoras: evita que a navbar fixa esconda o alvo do link */
+html {
+    scroll-behavior: smooth;
+}
+
+[id] {
+    scroll-margin-top: 4.5rem;
+}
+
+/* Organização geral da página */
+main {
+    display: grid;
+    gap: 2rem;
+}
+
+main > section {
+    display: grid;
+    gap: 1.25rem;
+    width: min(100%, 56rem);
+    justify-self: center;
+}
+
+/* Grade fixa de 3 colunas: cada fileira costuma ser uma linha evolutiva */
+.lista-pokemon {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+/* Card de cada Pokémon */
+.card-pokemon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    height: 100%;
+    text-align: center;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.card-pokemon:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.75rem 1.25rem rgba(10, 10, 10, 0.15);
+}
+
+/* Destaque do card quando se chega pelo link */
+.card-pokemon:target {
+    box-shadow: 0 0 0 3px #485fc7;
+}
+
+.card-pokemon .card-image {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+}
+
+.card-pokemon .card-image img {
+    width: 100%;
+    max-width: 14rem;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+.card-pokemon .card-content {
+    display: grid;
+    gap: 0.25rem;
+    justify-items: center;
+}
+
+.card-pokemon .numero {
+    font-size: 0.85rem;
+    color: #4a4a4a;
+}
+
+/* Etiquetas de tipo */
+.tipos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem;
+    padding-bottom: 1rem;
+}
+
+.tag.tipo-normal { background-color: #a8a878; color: #1a1a1a; }
+.tag.tipo-fogo { background-color: #f08030; color: #1a1a1a; }
+.tag.tipo-agua { background-color: #6890f0; color: #1a1a1a; }
+.tag.tipo-eletrico { background-color: #f8d030; color: #1a1a1a; }
+.tag.tipo-planta { background-color: #78c850; color: #1a1a1a; }
+.tag.tipo-gelo { background-color: #98d8d8; color: #1a1a1a; }
+.tag.tipo-lutador { background-color: #c03028; color: #ffffff; }
+.tag.tipo-veneno { background-color: #a040a0; color: #ffffff; }
+.tag.tipo-terra { background-color: #e0c068; color: #1a1a1a; }
+.tag.tipo-voador { background-color: #a890f0; color: #1a1a1a; }
+.tag.tipo-psiquico { background-color: #f85888; color: #1a1a1a; }
+.tag.tipo-inseto { background-color: #a8b820; color: #1a1a1a; }
+.tag.tipo-pedra { background-color: #b8a038; color: #1a1a1a; }
+.tag.tipo-fantasma { background-color: #705898; color: #ffffff; }
+.tag.tipo-dragao { background-color: #7038f8; color: #ffffff; }
 
 /* Rodapé do site */
 #rodape {
