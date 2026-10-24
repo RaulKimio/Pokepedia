@@ -9,34 +9,113 @@ html {
     scroll-margin-top: 4.5rem;
 }
 
-/* Organização geral da página */
-main {
-    display: grid;
-    gap: 2rem;
+/* Banner principal */
+#topo {
+    background-color: #19375f;
+}
+
+#topo .title {
+    color: #ffdd57;
+}
+
+#topo .subtitle {
+    color: #ffffff;
+}
+
+/* Conteúdo principal: seções de largura total, alternando o fundo como no index */
+main.section {
+    padding: 0;
 }
 
 main > section {
     display: grid;
-    gap: 1.25rem;
-    width: min(100%, 56rem);
-    justify-self: center;
+    /* laterais flexíveis + coluna central de até 56rem: o conteúdo fica centralizado
+       e sobra espaço nas laterais (útil para notícias, anúncios, etc.) */
+    grid-template-columns: minmax(1.5rem, 1fr) minmax(0, 56rem) minmax(1.5rem, 1fr);
+    align-content: start;
+    row-gap: 1.25rem;
+    padding: 3rem 0;
 }
 
-/* Grade fixa de 3 colunas: cada fileira costuma ser uma linha evolutiva */
+main > section > * {
+    grid-column: 2;
+}
+
+#introducao {
+    padding-bottom: 1.5rem;
+    background-color: #ffffff;
+}
+
+#faixa-1,
+#faixa-3 {
+    background-color: #f2f6fc;
+}
+
+#faixa-2 {
+    background-color: #ffffff;
+}
+
+main .title {
+    color: #19375f;
+}
+
+main p {
+    color: #263550;
+    line-height: 1.6;
+}
+
+#introducao strong,
+#introducao em {
+    color: #19375f;
+}
+
+section[id^="faixa-"] > h2.title {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Abas de atalho do topo */
+main > nav.tabs:not(:last-child) {
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+    background-color: #ffffff;
+}
+
+.tabs ul {
+    border-bottom-color: #d8e3f3;
+}
+
+.tabs a {
+    color: #19375f;
+    border-bottom-color: #d8e3f3;
+}
+
+.tabs.is-boxed a:hover {
+    background-color: #e8effb;
+    border-bottom-color: #d8e3f3;
+}
+
+/* Grade: 3 Pokémon por fileira (as evoluções ficam na mesma linha) */
 .lista-pokemon {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.25rem;
 }
 
-/* Card de cada Pokémon */
+.lista-pokemon > li {
+    display: flex;
+}
+
+/* Card de cada Pokémon (mesmo formato dos cards do index) */
 .card-pokemon {
     display: flex;
+    flex: 1;
     flex-direction: column;
-    align-items: center;
-    gap: 0.25rem;
-    height: 100%;
-    text-align: center;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(25, 55, 95, 0.1);
     transition:
         transform 0.15s ease,
         box-shadow 0.15s ease;
@@ -44,66 +123,122 @@ main > section {
 
 .card-pokemon:hover {
     transform: translateY(-4px);
-    box-shadow: 0 0.75rem 1.25rem rgba(10, 10, 10, 0.15);
+    box-shadow: 0 0.75rem 1.25rem rgba(25, 55, 95, 0.18);
 }
 
-/* Destaque do card quando se chega pelo link */
+/* Destaque do card quando se chega pelo link (ex.: pokedex.html#Pikachu) */
 .card-pokemon:target {
-    box-shadow: 0 0 0 3px #485fc7;
+    box-shadow:
+        0 0 0 3px #2756a6,
+        0 4px 12px rgba(25, 55, 95, 0.1);
 }
 
+/* Faixa colorida atrás da imagem */
 .card-pokemon .card-image {
     display: grid;
-    justify-items: center;
-    width: 100%;
+    place-items: center;
+    aspect-ratio: 5 / 4;
+    padding: 1rem;
+    background-color: #e8effb;
 }
 
 .card-pokemon .card-image img {
     width: 100%;
-    max-width: 14rem;
+    max-width: 200px;
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: contain;
 }
 
 .card-pokemon .card-content {
-    display: grid;
-    gap: 0.25rem;
-    justify-items: center;
+    flex: 1;
+    padding: 1rem 1.25rem 0.5rem;
 }
 
 .card-pokemon .numero {
     font-size: 0.85rem;
-    color: #4a4a4a;
+    font-weight: bold;
+    color: #53647e;
 }
+
+/* Cor da faixa conforme o PRIMEIRO tipo do Pokémon */
+.card-pokemon:has(.tipos > li:first-child.tipo-normal) .card-image   { background-color: #eceae1; }
+.card-pokemon:has(.tipos > li:first-child.tipo-fogo) .card-image     { background-color: #ffd8d2; }
+.card-pokemon:has(.tipos > li:first-child.tipo-agua) .card-image     { background-color: #d7efff; }
+.card-pokemon:has(.tipos > li:first-child.tipo-eletrico) .card-image { background-color: #fff2b3; }
+.card-pokemon:has(.tipos > li:first-child.tipo-planta) .card-image   { background-color: #d8f2d0; }
+.card-pokemon:has(.tipos > li:first-child.tipo-gelo) .card-image     { background-color: #d9f3f3; }
+.card-pokemon:has(.tipos > li:first-child.tipo-lutador) .card-image  { background-color: #f6d3cf; }
+.card-pokemon:has(.tipos > li:first-child.tipo-veneno) .card-image   { background-color: #e8d9f2; }
+.card-pokemon:has(.tipos > li:first-child.tipo-terra) .card-image    { background-color: #f1e5c3; }
+.card-pokemon:has(.tipos > li:first-child.tipo-voador) .card-image   { background-color: #e3dcf8; }
+.card-pokemon:has(.tipos > li:first-child.tipo-psiquico) .card-image { background-color: #fcd9e5; }
+.card-pokemon:has(.tipos > li:first-child.tipo-inseto) .card-image   { background-color: #e6edc4; }
+.card-pokemon:has(.tipos > li:first-child.tipo-pedra) .card-image    { background-color: #e8dfb8; }
+.card-pokemon:has(.tipos > li:first-child.tipo-fantasma) .card-image { background-color: #dcd3ea; }
+.card-pokemon:has(.tipos > li:first-child.tipo-dragao) .card-image   { background-color: #d9ccfa; }
 
 /* Etiquetas de tipo */
 .tipos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.25rem;
-    padding-bottom: 1rem;
+    gap: 0.35rem;
+    padding: 0 1.25rem 1.25rem;
 }
 
-.tag.tipo-normal { background-color: #a8a878; color: #1a1a1a; }
-.tag.tipo-fogo { background-color: #f08030; color: #1a1a1a; }
-.tag.tipo-agua { background-color: #6890f0; color: #1a1a1a; }
+.tag.tipo-normal   { background-color: #a8a878; color: #1a1a1a; }
+.tag.tipo-fogo     { background-color: #f08030; color: #1a1a1a; }
+.tag.tipo-agua     { background-color: #6890f0; color: #1a1a1a; }
 .tag.tipo-eletrico { background-color: #f8d030; color: #1a1a1a; }
-.tag.tipo-planta { background-color: #78c850; color: #1a1a1a; }
-.tag.tipo-gelo { background-color: #98d8d8; color: #1a1a1a; }
-.tag.tipo-lutador { background-color: #c03028; color: #ffffff; }
-.tag.tipo-veneno { background-color: #a040a0; color: #ffffff; }
-.tag.tipo-terra { background-color: #e0c068; color: #1a1a1a; }
-.tag.tipo-voador { background-color: #a890f0; color: #1a1a1a; }
+.tag.tipo-planta   { background-color: #78c850; color: #1a1a1a; }
+.tag.tipo-gelo     { background-color: #98d8d8; color: #1a1a1a; }
+.tag.tipo-lutador  { background-color: #c03028; color: #ffffff; }
+.tag.tipo-veneno   { background-color: #a040a0; color: #ffffff; }
+.tag.tipo-terra    { background-color: #e0c068; color: #1a1a1a; }
+.tag.tipo-voador   { background-color: #a890f0; color: #1a1a1a; }
 .tag.tipo-psiquico { background-color: #f85888; color: #1a1a1a; }
-.tag.tipo-inseto { background-color: #a8b820; color: #1a1a1a; }
-.tag.tipo-pedra { background-color: #b8a038; color: #1a1a1a; }
+.tag.tipo-inseto   { background-color: #a8b820; color: #1a1a1a; }
+.tag.tipo-pedra    { background-color: #b8a038; color: #1a1a1a; }
 .tag.tipo-fantasma { background-color: #705898; color: #ffffff; }
-.tag.tipo-dragao { background-color: #7038f8; color: #ffffff; }
+.tag.tipo-dragao   { background-color: #7038f8; color: #ffffff; }
 
-/* Rodapé do site */
+/* Atalhos secundários no fim de cada faixa: botões pequenos lado a lado */
+.nav-faixa ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 0.75rem;
+}
+
+.nav-faixa a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #2756a6;
+    text-decoration: none;
+    background-color: #ffffff;
+    border: 1px solid #c9d7ec;
+    border-radius: 999px;
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease;
+}
+
+.nav-faixa a:hover,
+.nav-faixa a:focus-visible {
+    color: #ffffff;
+    background-color: #2756a6;
+    border-color: #2756a6;
+}
+
+/* Rodapé */
 #rodape {
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+    text-align: center;
     background-color: #0c1c38;
     color: #dce6f5;
 }
@@ -112,6 +247,7 @@ main > section {
     color: #ffdd57;
 }
 
+#rodape p,
 #rodape address {
     color: #dce6f5;
     font-style: normal;
@@ -119,4 +255,56 @@ main > section {
 
 #rodape small {
     color: #b8c9e8;
+}
+
+/* Celular: continuam 3 por fileira, só com espaços e textos menores */
+@media (max-width: 600px) {
+    .lista-pokemon {
+        gap: 0.5rem;
+    }
+
+    .card-pokemon .card-image {
+        padding: 0.5rem;
+    }
+
+    .card-pokemon .card-content {
+        padding: 0.6rem 0.6rem 0.4rem;
+    }
+
+    .tipos {
+        gap: 0.25rem;
+        padding: 0 0.6rem 0.6rem;
+    }
+
+    .card-pokemon .title {
+        font-size: 0.9rem;
+    }
+
+    .card-pokemon .numero {
+        font-size: 0.7rem;
+    }
+
+    .card-pokemon .tag {
+        font-size: 0.65rem;
+    }
+
+    section[id^="faixa-"] > h2.title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Respeita quem prefere menos animação */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .card-pokemon,
+    .nav-faixa a {
+        transition: none;
+    }
+
+    .card-pokemon:hover {
+        transform: none;
+    }
 }
