@@ -145,10 +145,11 @@ main > nav.tabs:not(:last-child) {
 }
 
 /* =====================
-   8. CARD DO POKÉMON
+    CARD DO POKÉMON
    ===================== */
 
 .card-pokemon {
+    container-type: inline-size; /* Faz o card ser medido pelos @container: o layout interno reage à largura do card, não da janela. */
     display: flex; /* Organiza o conteúdo do card em coluna: imagem, depois nome, depois tipos. */
     flex: 1; /* Faz o card ocupar toda a largura/altura do <li>. */
     flex-direction: column;
@@ -166,13 +167,6 @@ main > nav.tabs:not(:last-child) {
 .card-pokemon:hover {
     transform: translateY(-4px); /* Ao passar o mouse, o card sobe 4px e a sombra aumenta. */
     box-shadow: 0 0.75rem 1.25rem rgba(25, 55, 95, 0.18);
-}
-
-/* Destaque do card quando se chega pelo link (ex.: pokedex.html#Pikachu) */
-.card-pokemon:target {
-    box-shadow:
-        0 0 0 3px #2756a6,
-        0 4px 12px rgba(25, 55, 95, 0.1);
 }
 
 /* Faixa colorida atrás da imagem */
@@ -201,6 +195,128 @@ main > nav.tabs:not(:last-child) {
     font-size: 0.85rem;
     font-weight: bold;
     color: #53647e;
+}
+
+/* ==============================
+   INFORMAÇÕES ADICIONAIS DO CARD
+   ============================== */
+
+.lista-pokemon {
+    align-items: start; /* Sem isso, abrir um card esticaria os outros da mesma fileira. */
+}
+
+.card-pokemon summary {
+    display: flex;          /* Organiza imagem, nome e tipos em coluna. */
+    flex-direction: column;
+    cursor: pointer;        /* Mostra a "mãozinha" para indicar que o card é clicável. */
+    list-style: none;       /* Remove a setinha padrão do summary. */
+}
+
+.card-pokemon summary::-webkit-details-marker {
+    display: none;          /* Remove a setinha no Chrome/Safari. */
+}
+
+.detalhes {
+    padding: 1rem 1.25rem 1.25rem; /* Espaço interno: 1rem em cima, 1,25rem nas laterais e embaixo. */
+    background-color: #f2f6fc; /* Fundo azul bem claro, para diferenciar da parte branca do card. */
+    border-top: 1px solid #e2e8f0; /* Linha fina separando o card das informações adicionais. */
+}
+
+.detalhes h4 {
+    margin: 0.75rem 0 0.4rem; /* Espaço de 0,75rem acima do subtítulo e 0,4rem abaixo, para ficar perto do texto dele. */
+    font-weight: bold;
+    color: #19375f; /* Azul-marinho, igual aos outros títulos do site. */
+}
+
+/* ---- Linha evolutiva ---- */
+.evolucao {
+    display: flex; /* Coloca os Pokémon lado a lado. */
+    gap: 0.5rem; /* Espaço entre as caixas. */
+}
+
+/* Cada Pokémon da evolução vira uma caixa QUADRADA. */
+.evolucao li {
+    flex: 1; /* As caixas dividem a largura do card igualmente. */
+    min-width: 0; /* Evita que o conteúdo force a caixa a ficar maior que a divisão. */
+    aspect-ratio: 1 / 1; /* Altura igual à largura: caixa quadrada. */
+    display: flex; /* Permite o link ocupar toda a caixa. */
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    transition: border-color 0.15s ease; /* Troca de cor suave ao passar o mouse. */
+}
+
+/* Ao passar o mouse, a borda fica azul para indicar que é clicável. */
+.evolucao li:hover {
+    border-color: #2756a6;
+}
+
+/* O link ocupa a caixa inteira, então a caixa toda é clicável. */
+.evolucao a {
+    flex: 1;
+    display: flex; /* Imagem em cima e nome embaixo... */
+    flex-direction: column;
+    align-items: center; /* ...centralizados na horizontal. */
+    min-height: 0;
+    padding: 0.4rem;
+    text-decoration: none; /* Remove o sublinhado do link. */
+}
+
+/* Imagem: ocupa todo o espaço livre da caixa. */
+.evolucao img {
+    flex: 1; /* Cresce para preencher a altura que sobra acima do nome. */
+    min-height: 0; /* Permite a imagem encolher em vez de estourar a caixa. */
+    width: 100%;
+    object-fit: contain; /* Mostra a imagem inteira, sem cortar nem distorcer. */
+}
+
+/* Nome do Pokémon embaixo da imagem. */
+.evolucao span {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #263550;
+}
+
+/* Pokémon do card atual: destaque azul. */
+.evolucao li.atual {
+    background-color: #e8effb;
+    border-color: #2756a6;
+}
+
+/* ==============================
+   INFORMAÇÕES ADICIONAIS AO CLICAR
+   ============================== */
+
+.descricao {
+    text-align: justify; /* Texto da descrição justificado. */
+    hyphens: auto; /* Permite quebrar palavras com hífen, evitando espaços muito grandes entre elas. */
+}
+
+
+.medidas {
+    display: flex; /* Coloca altura e peso lado a lado. */
+    gap: 0.5rem; /* Espaço entre as duas caixinhas. */
+}
+
+.medidas div {
+    flex: 1; /* As duas caixinhas dividem a largura disponível igualmente. */
+    padding: 0.4rem 0.6rem; /* Espaço interno da caixinha. */
+    background-color: #ffffff; /* Fundo branco. */
+    border: 1px solid #e2e8f0; /* Borda fina e clara. */
+    border-radius: 8px; /* Cantos arredondados. */
+    text-align: center; /* Texto centralizado dentro da caixinha. */
+}
+
+.medidas dt {
+    font-size: 0.75rem; /* Pequeno, pois é só o nome da informação. */
+    font-weight: bold;
+    color: #53647e; /* Cinza-azulado, o mesmo usado no número do Pokémon (#001). */
+}
+
+.medidas dd {
+    margin: 0; /* Remove a margem lateral padrão do navegador no <dd>. */
+    font-weight: bold;
+    color: #19375f; /* Azul-marinho para o valor ganhar destaque. */
 }
 
 /* ======================================
@@ -347,6 +463,57 @@ main > nav.tabs:not(:last-child) {
 
     section[id^="faixa-"] > h2.title { /* Título de cada faixa menor no celular. */
         font-size: 1.5rem;
+    }
+}
+
+/* ==========================================
+   INFORMAÇÕES ADICIONAIS EM CARDS ESTREITOS
+   ========================================== */
+
+/* Vale quando o CARD tiver até 270px de largura, seja por janela dividida ou celular. */
+@container (max-width: 270px) {
+
+    .detalhes { /* Menos espaço interno, pois o card é estreito. */
+        padding: 0.6rem;
+    }
+
+    .descricao { /* Justificado em coluna estreita deixa buracos grandes entre as palavras. */
+        text-align: left;
+        font-size: 0.8rem;
+    }
+
+    .detalhes h4 { /* Subtítulos menores. */
+        font-size: 0.85rem;
+    }
+
+    .medidas { /* Altura e peso um embaixo do outro. */
+        flex-direction: column;
+    }
+
+    .evolucao { /* Caixas da evolução empilhadas, em vez de lado a lado. */
+        flex-direction: column;
+    }
+
+    .evolucao li {
+        flex: none; /* Cada caixa tem a altura do próprio conteúdo. */
+        aspect-ratio: auto; /* Deixa de ser quadrada, senão ficaria minúscula. */
+    }
+
+    .evolucao a {
+        flex-direction: row; /* Imagem à esquerda e nome ao lado. */
+        gap: 0.4rem;
+        padding: 0.3rem;
+    }
+
+    .evolucao img {
+        flex: none; /* Tamanho fixo, sem encolher junto com a caixa. */
+        width: 32px;
+        height: 32px;
+    }
+
+    .evolucao span {
+        font-size: 0.7rem;
+        overflow-wrap: anywhere; /* Se o nome for muito longo (ex.: Charmeleon), quebra em vez de vazar da caixa. */
     }
 }
 
