@@ -100,22 +100,52 @@
                     <li>
                         <!-- (Bulbasaur) -->
                         <article class="card card-pokemon" id="Bulbasaur">
-                            <figure class="card-image">
-                                <!-- (Imagem dos arquivos) -->
-                                <img src="../imagens/bulbasaur.png" alt="Ilustração de Bulbasaur" width="150" height="150" loading="lazy" />
-                            </figure>
-                            <header class="card-content">
-                                <!-- (Informações do Pokémon) -->
-                                <p class="numero">#001</p>
-                                <h3 class="title is-5">Bulbasaur</h3>
-                            </header>
-                            <ul class="tipos" aria-label="Tipos de Bulbasaur">
-                                <!-- (Tipos do Pokémon) -->
-                                <li class="tag tipo-planta">Planta</li>
-                                <li class="tag tipo-veneno">Veneno</li>
-                            </ul>
+                            <details>  <!-- details/summary: ao clicar no card, o navegador mostra ou esconde o que vem depois do summary. -->
+                                <summary>
+                                    <figure class="card-image">
+                                        <!-- (Imagem dos arquivos) -->
+                                        <img src="../imagens/bulbasaur.png" alt="Ilustração de Bulbasaur" width="150" height="150" loading="lazy" />
+                                    </figure>
+                                    <header class="card-content">
+                                        <!-- (Informações do Pokémon) -->
+                                        <p class="numero">#001</p>
+                                        <h3 class="title is-5">Bulbasaur</h3>
+                                    </header>
+                                    <ul class="tipos" aria-label="Tipos de Bulbasaur">
+                                        <!-- (Tipos do Pokémon) -->
+                                        <li class="tag tipo-planta">Planta</li>
+                                        <li class="tag tipo-veneno">Veneno</li>
+                                    </ul>
+                                </summary>
+                                <!-- Informações adicionais (aparecem ao clicar) -->
+                                <div class="detalhes">
+                                    <dl class="medidas"> <!-- Altura e peso: <dl> é uma lista de pares "termo (dt) + valor (dd)". -->
+                                        <div>
+                                            <dt>Altura</dt>
+                                            <dd>0,7 m</dd>
+                                        </div>
+                                        <div>
+                                            <dt>Peso</dt>
+                                            <dd>6,9 kg</dd>
+                                        </div>
+                                    </dl>
+                                    <h4>Descrição</h4> <!-- Descrição da Pokedex do Ash -->
+                                    <p class="descricao">Bulbasaur nasce com a semente de uma planta às costas. 
+                                        A semente desenvolve-se lentamente. Os cientistas não sabem como classificar o Bulbasaur, se como planta ou animal. 
+                                        Bulbasaur é muito violento e difícil de apanhar no seu estado selvagem.</p>
+                                    <h4>Ataque mais forte</h4> <!-- Ataque mais forte que o Pokémon pode aprender -->
+                                    <p class="ataque"><span class="tag tipo-planta">Planta</span> Raio de Sol (SolarBeam)</p>
+                                    <h4>Linha evolutiva</h4> <!-- Links e imagens dos pokemon da linha evolutiva -->
+                                    <ul class="evolucao">
+                                        <li class="atual"><a href="#Bulbasaur"><img src="../imagens/bulbasaur.png" alt="Bulbasaur"><span>Bulbasaur</span></a></li>
+                                        <li><a href="#Ivysaur"><img src="../imagens/ivysaur.png" alt="Ivysaur"><span>Ivysaur</span></a></li>
+                                        <li><a href="#Venusaur"><img src="../imagens/venusaur.png" alt="Venusaur"><span>Venusaur</span></a></li>
+                                    </ul>
+                                </div>
+                            </details>
                         </article>
                     </li>
+
                     <li>
                     <!-- (Ivysaur) -->
                     <article class="card card-pokemon" id="Ivysaur">
@@ -135,6 +165,7 @@
                             </ul>
                         </article>
                     </li>
+
                     <li>
                         <!-- (Venusaur) -->
                         <article class="card card-pokemon" id="Venusaur">
