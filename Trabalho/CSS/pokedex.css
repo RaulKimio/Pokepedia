@@ -230,14 +230,16 @@ main > nav.tabs:not(:last-child) {
 
 /* ---- Linha evolutiva ---- */
 .evolucao {
-    display: flex; /* Coloca os Pokémon lado a lado. */
+    display: flex; /* Coloca os Pokémon lado a lado... */
+    flex-wrap: wrap; /* ...e quebra para a linha de baixo quando passar de 3 (ex.: Eevee, com 4). */
+    justify-content: center; /* Centraliza as caixas, inclusive a que sobra sozinha na última linha. */
     gap: 0.5rem; /* Espaço entre as caixas. */
 }
 
 /* Cada Pokémon da evolução vira uma caixa QUADRADA. */
 .evolucao li {
-    flex: 1; /* As caixas dividem a largura do card igualmente. */
-    min-width: 0; /* Evita que o conteúdo force a caixa a ficar maior que a divisão. */
+    flex: 0 0 calc((100% - 1rem) / 3); /* Tamanho FIXO: 1/3 da largura (o 1rem desconta os 2 espaços de 0,5rem). Não estica nem encolhe, não importa quantas caixas existam. */
+    min-width: 0; /* Evita que o conteúdo force a caixa a ficar maior que o previsto. */
     aspect-ratio: 1 / 1; /* Altura igual à largura: caixa quadrada. */
     display: flex; /* Permite o link ocupar toda a caixa. */
     background-color: #ffffff;
@@ -272,9 +274,12 @@ main > nav.tabs:not(:last-child) {
 
 /* Nome do Pokémon embaixo da imagem. */
 .evolucao span {
-    font-size: 0.8rem;
+    max-width: 100%; /* Nunca passa da largura da caixa. */
+    font-size: clamp(0.6rem, 3.6cqw, 0.8rem); /* O tamanho acompanha a largura do card (cqw = 1% da largura dele): nomes grandes, como Charmeleon, cabem em cards estreitos. */
     font-weight: bold;
+    text-align: center;
     color: #263550;
+    overflow-wrap: anywhere; /* Se mesmo assim não couber, quebra o nome em vez de vazar da caixa. */
 }
 
 /* Pokémon do card atual: destaque azul. */
@@ -492,6 +497,7 @@ main > nav.tabs:not(:last-child) {
 
     .evolucao { /* Caixas da evolução empilhadas, em vez de lado a lado. */
         flex-direction: column;
+        flex-wrap: nowrap; /* Sem quebra de linha: é uma coluna só. */
     }
 
     .evolucao li {
