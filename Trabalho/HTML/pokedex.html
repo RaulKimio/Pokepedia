@@ -87,6 +87,65 @@
                 </ul>
             </nav>
 
+            <!-- ====================
+                FILTRO POR TIPO
+                ==================== -->
+            <section id="filtros">
+                <h2 class="title is-5">Filtrar por tipo</h2>
+                <!-- O <form> existe para o botão "Limpar" (type="reset") desmarcar todos os checkboxes de uma vez. -->
+                <form>
+                    <div class="botoes-filtro">
+                        <!-- Cada tipo tem um checkbox (escondido pelo CSS) e um label, que é o botão que o usuário vê. -->
+                        <input type="checkbox" id="filtro-normal" class="filtro-check">
+                        <label for="filtro-normal" class="tag tipo-normal filtro">Normal</label>
+
+                        <input type="checkbox" id="filtro-fogo" class="filtro-check">
+                        <label for="filtro-fogo" class="tag tipo-fogo filtro">Fogo</label>
+
+                        <input type="checkbox" id="filtro-agua" class="filtro-check">
+                        <label for="filtro-agua" class="tag tipo-agua filtro">Água</label>
+
+                        <input type="checkbox" id="filtro-eletrico" class="filtro-check">
+                        <label for="filtro-eletrico" class="tag tipo-eletrico filtro">Elétrico</label>
+
+                        <input type="checkbox" id="filtro-planta" class="filtro-check">
+                        <label for="filtro-planta" class="tag tipo-planta filtro">Planta</label>
+
+                        <input type="checkbox" id="filtro-gelo" class="filtro-check">
+                        <label for="filtro-gelo" class="tag tipo-gelo filtro">Gelo</label>
+
+                        <input type="checkbox" id="filtro-lutador" class="filtro-check">
+                        <label for="filtro-lutador" class="tag tipo-lutador filtro">Lutador</label>
+
+                        <input type="checkbox" id="filtro-veneno" class="filtro-check">
+                        <label for="filtro-veneno" class="tag tipo-veneno filtro">Veneno</label>
+
+                        <input type="checkbox" id="filtro-terra" class="filtro-check">
+                        <label for="filtro-terra" class="tag tipo-terra filtro">Terra</label>
+
+                        <input type="checkbox" id="filtro-voador" class="filtro-check">
+                        <label for="filtro-voador" class="tag tipo-voador filtro">Voador</label>
+
+                        <input type="checkbox" id="filtro-psiquico" class="filtro-check">
+                        <label for="filtro-psiquico" class="tag tipo-psiquico filtro">Psíquico</label>
+
+                        <input type="checkbox" id="filtro-inseto" class="filtro-check">
+                        <label for="filtro-inseto" class="tag tipo-inseto filtro">Inseto</label>
+
+                        <input type="checkbox" id="filtro-pedra" class="filtro-check">
+                        <label for="filtro-pedra" class="tag tipo-pedra filtro">Pedra</label>
+
+                        <input type="checkbox" id="filtro-fantasma" class="filtro-check">
+                        <label for="filtro-fantasma" class="tag tipo-fantasma filtro">Fantasma</label>
+
+                        <input type="checkbox" id="filtro-dragao" class="filtro-check">
+                        <label for="filtro-dragao" class="tag tipo-dragao filtro">Dragão</label>
+                    </div>
+                    <!-- type="reset" desmarca todos os campos do formulário -->
+                    <button type="reset" class="button is-small">Limpar filtros</button>
+                </form>
+            </section>
+
             <!-- ==============================
                  SEÇÕES DAS FAIXAS DE POKÉMON
                  ============================== -->
@@ -145,6 +204,7 @@
                             </details>
                         </article>
                     </li>
+                    <li>
 
                     <!-- (Ivysaur) -->
                         <article class="card card-pokemon" id="Ivysaur">
