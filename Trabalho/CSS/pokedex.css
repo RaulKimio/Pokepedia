@@ -107,7 +107,7 @@ section[id^="faixa-"] > h2.title {
 }
 
 /* ===========================
-   6. ABAS DE ATALHO DO TOPO 
+    ABAS DE ATALHO DO TOPO 
    =========================== */
 
 main > nav.tabs:not(:last-child) {
@@ -131,7 +131,7 @@ main > nav.tabs:not(:last-child) {
 }
 
 /* =====================
-   7. GRADE DE POKÉMON
+    GRADE DE POKÉMON
    ===================== */
 .lista-pokemon {
     display: grid; /* Grade de exatamente 3 colunas, para as evoluções ficarem na mesma fileira. */
@@ -369,6 +369,89 @@ main > nav.tabs:not(:last-child) {
 .tag.tipo-pedra    { background-color: #b8a038; color: #1a1a1a; }
 .tag.tipo-fantasma { background-color: #705898; color: #ffffff; }
 .tag.tipo-dragao   { background-color: #7038f8; color: #ffffff; }
+
+/* ==============
+    FILTRO DE TIPO
+   ============== */
+
+#filtros {
+    background-color: #ffffff; /* Continua o fundo branco das abas de atalho. */
+    padding: 0 0 2rem; /* A regra "main > section" daria 3rem em cima; aqui fica colada nas abas. */
+    text-align: center;
+}
+
+.botoes-filtro {
+    display: flex; /* Botões lado a lado, quebrando de linha quando não couberem. */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* O checkbox fica invisível, mas continua acessível pelo teclado (Tab e Espaço). */
+.filtro-check {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* O label é o botão que o usuário vê. A cor vem das classes tipo-xxx, iguais às dos cards. */
+.tag.filtro {
+    height: 2rem;
+    padding: 0 1rem;
+    font-size: 0.875rem;
+    cursor: pointer; /* Mãozinha ao passar o mouse. */
+    transition: transform 0.15s ease;
+}
+
+.tag.filtro:hover {
+    transform: translateY(-2px); /* O botão sobe um pouco ao passar o mouse. */
+}
+
+/* Checkbox marcado: o label logo depois dele ganha contorno azul e um ✓. */
+.filtro-check:checked + .filtro {
+    outline: 3px solid #2756a6;
+    outline-offset: 2px;
+    font-weight: bold;
+}
+
+.filtro-check:checked + .filtro::before {
+    content: "✓";
+    margin-right: 0.35rem; /* Espaço entre o ✓ e o nome do tipo. */
+}
+
+/* Navegando com o teclado, mostra qual botão está selecionado. */
+.filtro-check:focus-visible + .filtro {
+    outline: 3px solid #ffdd57;
+    outline-offset: 2px;
+}
+
+/* ---- A lógica do filtro ---- */
+
+/* 1) Se QUALQUER filtro estiver marcado, esconde todos os cards... */
+main:has(.filtro-check:checked) .lista-pokemon > li {
+    display: none;
+}
+
+/* 2) ...e mostra de volta só os que têm o tipo marcado.
+      ".tipos > .tipo-fogo" olha só a lista de tipos do card (e não a etiqueta do "ataque mais forte"). */
+main:has(#filtro-normal:checked) .lista-pokemon > li:has(.tipos > .tipo-normal),
+main:has(#filtro-fogo:checked) .lista-pokemon > li:has(.tipos > .tipo-fogo),
+main:has(#filtro-agua:checked) .lista-pokemon > li:has(.tipos > .tipo-agua),
+main:has(#filtro-eletrico:checked) .lista-pokemon > li:has(.tipos > .tipo-eletrico),
+main:has(#filtro-planta:checked) .lista-pokemon > li:has(.tipos > .tipo-planta),
+main:has(#filtro-gelo:checked) .lista-pokemon > li:has(.tipos > .tipo-gelo),
+main:has(#filtro-lutador:checked) .lista-pokemon > li:has(.tipos > .tipo-lutador),
+main:has(#filtro-veneno:checked) .lista-pokemon > li:has(.tipos > .tipo-veneno),
+main:has(#filtro-terra:checked) .lista-pokemon > li:has(.tipos > .tipo-terra),
+main:has(#filtro-voador:checked) .lista-pokemon > li:has(.tipos > .tipo-voador),
+main:has(#filtro-psiquico:checked) .lista-pokemon > li:has(.tipos > .tipo-psiquico),
+main:has(#filtro-inseto:checked) .lista-pokemon > li:has(.tipos > .tipo-inseto),
+main:has(#filtro-pedra:checked) .lista-pokemon > li:has(.tipos > .tipo-pedra),
+main:has(#filtro-fantasma:checked) .lista-pokemon > li:has(.tipos > .tipo-fantasma),
+main:has(#filtro-dragao:checked) .lista-pokemon > li:has(.tipos > .tipo-dragao) {
+    display: flex;
+}
 
 /* ==================================
      ATALHOS NO FIM DE CADA FAIXA 
