@@ -1,6 +1,17 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
 
-
+#topo {
+    background-color: #19375f;
+}
+#topo .title {
+    color: #ffdd57;
+}
+#topo .subtitle {
+    color: #ffffff;
+}
+body{
+    background-color: #ffffff;
+}
 /* Rodapé do site */
 #rodape {
     background-color: #0c1c38;
@@ -43,7 +54,7 @@ fieldset{
     border-radius: 10px;
     padding: 20px;
     margin: 20px 0;
-    background-color: #2c2b39;
+    background-color: #F0F7FF;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -52,11 +63,13 @@ fieldset{
 legend{
     font-size: 1.2rem;
     font-weight: bold;
-    color: #929292;
+    color: #2563EB;
     padding: 0 10px;
 }
 input, select, textarea{
     text-align: center;
+    color: #1E293B;
+    background-color: #c7ddff;
     font-size: large;
     width: 500px;
 }
