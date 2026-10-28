@@ -1,12 +1,13 @@
+/* Carrega o Bulma, que fornece a grade e componentes usados no HTML dos ginásios. */
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
 
-/* Cores gerais */
+/* BASE: define o fundo e a cor de texto padrão da página. */
 body {
     background-color: #e5ebf4;
     color: #263550;
 }
 
-/* Banner da página */
+/* BANNER: organiza a apresentação do ginásio, o título e o texto introdutório. */
 .gym-hero {
     background-color: #19375f;
     color: #ffffff;
@@ -40,7 +41,7 @@ body {
     font-size: 1.15rem;
 }
 
-/* Carteira de insígnias */
+/* INSÍGNIAS: transforma a figura e sua legenda em uma carteira destacada no banner. */
 .badge-case {
     padding: 0.8rem;
     background-color: #2756a6;
@@ -68,7 +69,7 @@ body {
     object-fit: contain;
 }
 
-/* Introdução aos ginásios */
+/* INTRODUÇÃO: limita a largura do conteúdo, cria o painel explicativo e estiliza os links internos. */
 main {
     max-width: 1100px;
     margin: 0 auto;
@@ -106,7 +107,7 @@ main {
     text-decoration: underline;
 }
 
-/* Cartões dos oito ginásios */
+/* SEÇÕES DOS GINÁSIOS: cria um painel para cada cidade e deixa espaço para os saltos dos links internos. */
 main > section:not(.gym-intro) {
     margin-bottom: 2rem;
     padding: 1.5rem;
@@ -146,7 +147,7 @@ main em {
     color: #2756a6;
 }
 
-/* Lista dos Pokémon de cada líder */
+/* EQUIPES: organiza os cards em linhas flexíveis; cada card tem estados de mouse e foco de teclado. */
 main article {
     display: flex;
     flex-wrap: wrap;
@@ -210,6 +211,7 @@ main article .pokemon-card .tags {
     margin-bottom: 0;
 }
 
+/* Cores das imagens e etiquetas: as classes tipo-* correspondem ao tipo do Pokémon indicado no HTML. */
 .tipo-pedra img, .tipo-terra img { background-color: #f3ead7 !important; }
 .tipo-agua img { background-color: #d7efff !important; }
 .tipo-psiquico img, .tipo-veneno img { background-color: #f0e4fb !important; }
@@ -226,7 +228,7 @@ main article .pokemon-card .tags {
 .tag.tipo-inseto { background-color: #e4f1d2; color: #476329; }
 .tag.tipo-fogo { background-color: #ffd8d2; color: #9c382c; }
 
-/* Rodapé */
+/* RODAPÉ: aplica cores contrastantes aos créditos e às informações legais. */
 #rodape {
     background-color: #0c1c38;
     color: #dce6f5;
@@ -245,7 +247,7 @@ main article .pokemon-card .tags {
     color: #b8c9e8;
 }
 
-/* Ajustes para telas pequenas */
+/* RESPONSIVO: reduz espaços e títulos em celular, e deixa os cards em duas colunas. */
 @media (max-width: 600px) {
     .gym-hero .hero-body {
         padding: 2rem 1rem;

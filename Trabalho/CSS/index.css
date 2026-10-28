@@ -1,6 +1,7 @@
+/* Carrega o Bulma, usado nas classes de grade, botões, cards e espaçamento do HTML. */
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
 
-/* Espaçamento e cores gerais das seções */
+/* BASE DAS SEÇÕES: espaçamento vertical, fundos alternados, cor padrão de títulos e textos. */
 #sobre,
 #destaques,
 #curiosidades,
@@ -37,7 +38,7 @@
     color: #263550;
 }
 
-/* Banner principal */
+/* BANNER: aplica o fundo azul e define as cores do título e do texto de apresentação. */
 #topo {
     background-color: #19375f;
 }
@@ -51,12 +52,13 @@
 }
 
 #topo img {
+    /* Mantém a arte do banner dentro da coluna sem distorcer sua proporção. */
     width: 100%;
     max-height: 300px;
     object-fit: contain;
 }
 
-/* Apresentação da Poképédia */
+/* SOBRE: dá contraste ao quadro de apresentação e destaca termos importantes. */
 #sobre .box {
     background-color: #e8effb;
     border: 1px solid #d8e3f3;
@@ -67,7 +69,7 @@
     color: #19375f;
 }
 
-/* Cartões dos Pokémon em destaque */
+/* DESTAQUES: faz as colunas e cards ocuparem a mesma altura e organiza seu conteúdo verticalmente. */
 #destaques .column {
     display: flex;
 }
@@ -117,23 +119,55 @@
 }
 
 .pokemon-img {
+    /* Define o tamanho da imagem parada usada em cada card de Pokémon. */
     width: 160px;
     height: 160px;
     object-fit: contain;
 }
 
+/* GIF NO HOVER: posiciona as imagens uma sobre a outra; o HTML fornece os arquivos e o CSS alterna a transparência. */
+#destaques figure {
+    position: relative;
+}
+
+#destaques .pokemon-img,
+#destaques .pokemon-gif {
+    transition: opacity 0.2s ease;
+}
+
+#destaques .pokemon-gif {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+
+#destaques figure:hover .pokemon-img {
+    opacity: 0;
+}
+
+#destaques figure:hover .pokemon-gif {
+    opacity: 1;
+}
+
+/* Fundos suaves identificam visualmente cada um dos quatro Pokémon em destaque. */
 .fundo-amarelo { background-color: #fff2b3; }
 .fundo-verde { background-color: #d8f2d0; }
 .fundo-vermelho { background-color: #ffd8d2; }
 .fundo-azul { background-color: #d7efff; }
 
-/* Etiqueta Veneno do Bulbasaur */
+/* Ajusta a etiqueta Veneno do Bulbasaur para usar o roxo da identidade visual do tipo. */
 #destaques .columns > .column:nth-child(2) .tag.is-danger {
     background-color: #8b5bb5;
     color: #ffffff;
 }
 
-/* Curiosidades */
+/* CURIOSIDADES: alinha as caixas, aplica borda e sombra; o número vira um marcador circular. */
 #curiosidades .column {
     display: flex;
 }
@@ -171,7 +205,7 @@
     color: #19375f;
 }
 
-/* Seção "Você sabia?" */
+/* VOCÊ SABIA?: mantém os artigos com alturas iguais e marca cada caixa com uma borda amarela. */
 #voce-sabia .column {
     display: flex;
 }
@@ -201,7 +235,7 @@
     color: #19375f;
 }
 
-/* Vídeo de abertura */
+/* VÍDEO: limita a largura da introdução e estiliza o quadro e o iframe incorporado. */
 #abertura .subtitle {
     max-width: 760px;
     margin: 0 auto 2rem;
@@ -233,7 +267,7 @@
     color: #19375f;
 }
 
-/* Rodapé */
+/* RODAPÉ: usa fundo escuro e cores claras para separar créditos do conteúdo principal. */
 #rodape {
     background-color: #0c1c38;
     color: #dce6f5;
