@@ -1,24 +1,25 @@
 <!doctype html>
 <html lang="pt-br" class="has-navbar-fixed-top">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../CSS/contribuir.css" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/contribuir.css">
         <link rel="icon" type="image/svg+xml" href="../imagens/favicon.svg">
         <title>Contribuir</title>
-    </head>
+        <script src="../JS/navbar.js" defer></script>
+  </head>
     <body>
-        <nav id="topo" class="navbar is-fixed-top is-light">
+        <nav class="navbar is-fixed-top is-light">
             <div class="navbar-brand">
                 <a class="navbar-item" href="./index.html">
                     <img src="../imagens/logo.svg" alt="Poképédia">
                 </a>
-                <div class="navbar-burger js-burger" data-target="navbarExampleTransparentExample">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <button type="button" class="navbar-burger" data-target="navbarExampleTransparentExample" aria-controls="navbarExampleTransparentExample" aria-label="Abrir menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
             </div>
 
             <div id="navbarExampleTransparentExample" class="navbar-menu">
@@ -45,11 +46,12 @@
 
                         <label for="tipo">Tipo de contribuição (Obrigatório!)</label>
                         <select name="tipo_contribuicao" id="tipo" required>
+                            <option value="" selected disabled>Selecione o tipo de contribuição</option>
                             <option value="1">Adicionar conteúdo novo</option>
                             <option value="2">Corrigir uma informação</option>
                             <option value="3">Atualizar conteúdo existente</option>
                             <option value="4">Sugerir imagens ou materiais</option>
-                            <option value="5" selected>Enviar uma sugestão geral</option>
+                            <option value="5">Enviar uma sugestão geral</option>
                         </select>
 
                         <label for="titulo">Título (Obrigatório!)</label>
@@ -57,6 +59,7 @@
 
                         <label for="categoria">Categoria (Obrigatório!)</label>
                         <select name="categoria" id="categoria" required>
+                            <option value="" selected disabled>Selecione uma categoria</option>
                             <option value="1">Pokémon</option>
                             <option value="2">Tipos</option>
                             <option value="3">Habilidades</option>
@@ -94,7 +97,7 @@
                         <input type="text" id="nome" name="nome">
 
                         <label for="email">E-Mail para contato</label>
-                        <input type="email" id="email" nome="email">
+                        <input type="email" id="email" name="email">
                     </fieldset>
 
                     <button type="submit">ENVIAR CONTRIBUIÇÃO</button>

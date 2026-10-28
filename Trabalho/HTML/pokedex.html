@@ -2,12 +2,13 @@
 <html lang="pt-br" class="has-navbar-fixed-top"> <!-- lang="pt-br": informa o idioma da página. 
     class="has-navbar-fixed-top": classe do Bulma que adiciona um padding no topo da página do tamanho da navbar.-->
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Viewport: faz a página se adaptar à largura da tela em celulares. -->
-        <link rel="stylesheet" href="../CSS/pokedex.css" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport: faz a página se adaptar à largura da tela em celulares. -->
+        <link rel="stylesheet" href="../CSS/pokedex.css">
         <link rel="icon" type="image/svg+xml" href="../imagens/favicon.svg">  <!-- Favicon: o ícone pequeno que aparece na aba do navegador. -->
         <title>Pokédex</title>  <!-- Título exibido na aba do navegador e nos resultados de busca. -->
-    </head>
+        <script src="../JS/navbar.js" defer></script>
+  </head>
     <body>
         <!-- ====================
              BARRA DE NAVEGAÇÃO 
@@ -18,20 +19,20 @@
                     <img src="../imagens/logo.svg" alt="Poképédia"> <!-- O alt é exibido caso a imagem não carregue. -->
                 </a>
 
-                <div class="navbar-burger js-burger" data-target="navbarExampleTransparentExample">
-                     <!-- Botão burguer (três barrinhas) aparece só em telas pequenas. -->
-                     <!-- js-burger: classe usada para o JavaScript localizar o botão -->
-                     <!-- data-target: id do menu que será aberto/fechado ao clicar. -->
+                <button type="button" class="navbar-burger" data-target="navbarExampleTransparentExample" aria-controls="navbarExampleTransparentExample" aria-label="Abrir menu" aria-expanded="false">
+                     
+                     
+                     
                                 
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <!-- As 4 <span> vazias são desenhadas pelo Bulma como as barrinhas do ícone. -->
-                </div>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    
+                </button>
             </div>
 
-            <!-- menu: em telas grandes aparece na horizontal; em telas pequenas fica escondido até clicar no hambúrguer. Por enquanto não funciona -->
+            <!-- Em telas pequenas, o Bulma esconde o menu até o JavaScript alternar a classe is-active. -->
             <div id="navbarExampleTransparentExample" class="navbar-menu"> 
                 <div class="navbar-start">  <!-- agrupa os itens alinhados à esquerda. -->
                     <!-- Links para as demais páginas do site. -->
@@ -163,7 +164,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/bulbasaur.png" alt="Ilustração de Bulbasaur" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/bulbasaur.png" alt="Ilustração de Bulbasaur" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -212,7 +213,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/ivysaur.png" alt="Ilustração de Ivysaur" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/ivysaur.png" alt="Ilustração de Ivysaur" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -258,7 +259,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/venusaur.png" alt="Ilustração de Venusaur" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/venusaur.png" alt="Ilustração de Venusaur" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -304,7 +305,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/charmander.png" alt="Ilustração de Charmander" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/charmander.png" alt="Ilustração de Charmander" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -349,7 +350,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/charmeleon.png" alt="Ilustração de Charmeleon" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/charmeleon.png" alt="Ilustração de Charmeleon" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -394,7 +395,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/charizard.png" alt="Ilustração de Charizard" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/charizard.png" alt="Ilustração de Charizard" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -440,7 +441,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/squirtle.png" alt="Ilustração de Squirtle" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/squirtle.png" alt="Ilustração de Squirtle" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -485,7 +486,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/wartortle.png" alt="Ilustração de Wartortle" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/wartortle.png" alt="Ilustração de Wartortle" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -530,7 +531,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/blastoise.png" alt="Ilustração de Blastoise" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/blastoise.png" alt="Ilustração de Blastoise" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -575,7 +576,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/caterpie.png" alt="Ilustração de Caterpie" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/caterpie.png" alt="Ilustração de Caterpie" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -620,7 +621,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/metapod.png" alt="Ilustração de Metapod" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/metapod.png" alt="Ilustração de Metapod" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -665,7 +666,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/butterfree.png" alt="Ilustração de Butterfree" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/butterfree.png" alt="Ilustração de Butterfree" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -711,7 +712,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/weedle.png" alt="Ilustração de Weedle" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/weedle.png" alt="Ilustração de Weedle" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -757,7 +758,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/kakuna.png" alt="Ilustração de Kakuna" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/kakuna.png" alt="Ilustração de Kakuna" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -803,7 +804,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/beedrill.png" alt="Ilustração de Beedrill" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/beedrill.png" alt="Ilustração de Beedrill" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -849,7 +850,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/pidgey.png" alt="Ilustração de Pidgey" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/pidgey.png" alt="Ilustração de Pidgey" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -895,7 +896,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/pidgeotto.png" alt="Ilustração de Pidgeotto" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/pidgeotto.png" alt="Ilustração de Pidgeotto" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -941,7 +942,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/pidgeot.png" alt="Ilustração de Pidgeot" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/pidgeot.png" alt="Ilustração de Pidgeot" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -987,7 +988,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/rattata.png" alt="Ilustração de Rattata" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/rattata.png" alt="Ilustração de Rattata" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1031,7 +1032,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/raticate.png" alt="Ilustração de Raticate" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/raticate.png" alt="Ilustração de Raticate" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1075,7 +1076,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/spearow.png" alt="Ilustração de Spearow" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/spearow.png" alt="Ilustração de Spearow" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1120,7 +1121,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/fearow.png" alt="Ilustração de Fearow" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/fearow.png" alt="Ilustração de Fearow" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1165,7 +1166,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/ekans.png" alt="Ilustração de Ekans" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/ekans.png" alt="Ilustração de Ekans" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1209,7 +1210,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/arbok.png" alt="Ilustração de Arbok" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/arbok.png" alt="Ilustração de Arbok" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1253,7 +1254,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/pikachu.png" alt="Ilustração de Pikachu" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/pikachu.png" alt="Ilustração de Pikachu" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1297,7 +1298,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/raichu.png" alt="Ilustração de Raichu" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/raichu.png" alt="Ilustração de Raichu" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1341,7 +1342,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/sandshrew.png" alt="Ilustração de Sandshrew" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/sandshrew.png" alt="Ilustração de Sandshrew" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1385,7 +1386,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/sandslash.png" alt="Ilustração de Sandslash" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/sandslash.png" alt="Ilustração de Sandslash" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1429,7 +1430,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/nidoran_femea.png" alt="Ilustração de Nidoran♀" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/nidoran_femea.png" alt="Ilustração de Nidoran♀" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1474,7 +1475,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/nidorina.png" alt="Ilustração de Nidorina" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/nidorina.png" alt="Ilustração de Nidorina" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1519,7 +1520,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/nidoqueen.png" alt="Ilustração de Nidoqueen" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/nidoqueen.png" alt="Ilustração de Nidoqueen" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1565,7 +1566,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/nidoran_macho.png" alt="Ilustração de Nidoran♂" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/nidoran_macho.png" alt="Ilustração de Nidoran♂" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1610,7 +1611,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/nidorino.png" alt="Ilustração de Nidorino" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/nidorino.png" alt="Ilustração de Nidorino" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1655,7 +1656,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/nidoking.png" alt="Ilustração de Nidoking" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/nidoking.png" alt="Ilustração de Nidoking" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1701,7 +1702,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/clefairy.png" alt="Ilustração de Clefairy" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/clefairy.png" alt="Ilustração de Clefairy" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1745,7 +1746,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/clefable.png" alt="Ilustração de Clefable" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/clefable.png" alt="Ilustração de Clefable" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1789,7 +1790,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/vulpix.png" alt="Ilustração de Vulpix" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/vulpix.png" alt="Ilustração de Vulpix" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1833,7 +1834,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/ninetales.png" alt="Ilustração de Ninetales" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/ninetales.png" alt="Ilustração de Ninetales" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1877,7 +1878,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/jigglypuff.png" alt="Ilustração de Jigglypuff" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/jigglypuff.png" alt="Ilustração de Jigglypuff" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1921,7 +1922,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/wigglytuff.png" alt="Ilustração de Wigglytuff" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/wigglytuff.png" alt="Ilustração de Wigglytuff" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -1965,7 +1966,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/zubat.png" alt="Ilustração de Zubat" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/zubat.png" alt="Ilustração de Zubat" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2010,7 +2011,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/golbat.png" alt="Ilustração de Golbat" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/golbat.png" alt="Ilustração de Golbat" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2055,7 +2056,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/oddish.png" alt="Ilustração de Oddish" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/oddish.png" alt="Ilustração de Oddish" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2101,7 +2102,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/gloom.png" alt="Ilustração de Gloom" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/gloom.png" alt="Ilustração de Gloom" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2147,7 +2148,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/vileplume.png" alt="Ilustração de Vileplume" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/vileplume.png" alt="Ilustração de Vileplume" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2193,7 +2194,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/paras.png" alt="Ilustração de Paras" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/paras.png" alt="Ilustração de Paras" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2238,7 +2239,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/parasect.png" alt="Ilustração de Parasect" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/parasect.png" alt="Ilustração de Parasect" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2283,7 +2284,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/venonat.png" alt="Ilustração de Venonat" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/venonat.png" alt="Ilustração de Venonat" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2328,7 +2329,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/venomoth.png" alt="Ilustração de Venomoth" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/venomoth.png" alt="Ilustração de Venomoth" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2373,7 +2374,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/diglett.png" alt="Ilustração de Diglett" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/diglett.png" alt="Ilustração de Diglett" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2432,7 +2433,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/dugtrio.png" alt="Ilustração de Dugtrio" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/dugtrio.png" alt="Ilustração de Dugtrio" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2476,7 +2477,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/meowth.png" alt="Ilustração de Meowth" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/meowth.png" alt="Ilustração de Meowth" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2520,7 +2521,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/persian.png" alt="Ilustração de Persian" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/persian.png" alt="Ilustração de Persian" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2564,7 +2565,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/psyduck.png" alt="Ilustração de Psyduck" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/psyduck.png" alt="Ilustração de Psyduck" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2608,7 +2609,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/golduck.png" alt="Ilustração de Golduck" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/golduck.png" alt="Ilustração de Golduck" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2652,7 +2653,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/mankey.png" alt="Ilustração de Mankey" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/mankey.png" alt="Ilustração de Mankey" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2696,7 +2697,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/primeape.png" alt="Ilustração de Primeape" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/primeape.png" alt="Ilustração de Primeape" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2740,7 +2741,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/growlithe.png" alt="Ilustração de Growlithe" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/growlithe.png" alt="Ilustração de Growlithe" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2784,7 +2785,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/arcanine.png" alt="Ilustração de Arcanine" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/arcanine.png" alt="Ilustração de Arcanine" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2828,7 +2829,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/poliwag.png" alt="Ilustração de Poliwag" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/poliwag.png" alt="Ilustração de Poliwag" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2873,7 +2874,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/poliwhirl.png" alt="Ilustração de Poliwhirl" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/poliwhirl.png" alt="Ilustração de Poliwhirl" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2918,7 +2919,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/poliwrath.png" alt="Ilustração de Poliwrath" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/poliwrath.png" alt="Ilustração de Poliwrath" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -2964,7 +2965,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/abra.png" alt="Ilustração de Abra" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/abra.png" alt="Ilustração de Abra" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3009,7 +3010,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/kadabra.png" alt="Ilustração de Kadabra" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/kadabra.png" alt="Ilustração de Kadabra" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3054,7 +3055,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/alakazam.png" alt="Ilustração de Alakazam" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/alakazam.png" alt="Ilustração de Alakazam" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3099,7 +3100,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/machop.png" alt="Ilustração de Machop" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/machop.png" alt="Ilustração de Machop" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3144,7 +3145,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/machoke.png" alt="Ilustração de Machoke" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/machoke.png" alt="Ilustração de Machoke" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3189,7 +3190,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/machamp.png" alt="Ilustração de Machamp" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/machamp.png" alt="Ilustração de Machamp" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3234,7 +3235,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/bellsprout.png" alt="Ilustração de Bellsprout" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/bellsprout.png" alt="Ilustração de Bellsprout" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3280,7 +3281,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/weepinbell.png" alt="Ilustração de Weepinbell" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/weepinbell.png" alt="Ilustração de Weepinbell" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3326,7 +3327,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/victreebel.png" alt="Ilustração de Victreebel" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/victreebel.png" alt="Ilustração de Victreebel" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3372,7 +3373,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/tentacool.png" alt="Ilustração de Tentacool" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/tentacool.png" alt="Ilustração de Tentacool" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3417,7 +3418,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/tentacruel.png" alt="Ilustração de Tentacruel" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/tentacruel.png" alt="Ilustração de Tentacruel" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3462,7 +3463,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/geodude.png" alt="Ilustração de Geodude" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/geodude.png" alt="Ilustração de Geodude" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3508,7 +3509,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/graveler.png" alt="Ilustração de Graveler" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/graveler.png" alt="Ilustração de Graveler" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3554,7 +3555,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/golem.png" alt="Ilustração de Golem" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/golem.png" alt="Ilustração de Golem" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3600,7 +3601,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/ponyta.png" alt="Ilustração de Ponyta" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/ponyta.png" alt="Ilustração de Ponyta" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3644,7 +3645,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/rapidash.png" alt="Ilustração de Rapidash" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/rapidash.png" alt="Ilustração de Rapidash" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3688,7 +3689,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/slowpoke.png" alt="Ilustração de Slowpoke" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/slowpoke.png" alt="Ilustração de Slowpoke" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3733,7 +3734,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/slowbro.png" alt="Ilustração de Slowbro" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/slowbro.png" alt="Ilustração de Slowbro" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3778,7 +3779,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/magnemite.png" alt="Ilustração de Magnemite" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/magnemite.png" alt="Ilustração de Magnemite" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3822,7 +3823,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/magneton.png" alt="Ilustração de Magneton" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/magneton.png" alt="Ilustração de Magneton" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3866,7 +3867,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/farfetchd.png" alt="Ilustração de Farfetch'd" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/farfetchd.png" alt="Ilustração de Farfetch'd" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3910,7 +3911,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/doduo.png" alt="Ilustração de Doduo" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/doduo.png" alt="Ilustração de Doduo" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -3955,7 +3956,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/dodrio.png" alt="Ilustração de Dodrio" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/dodrio.png" alt="Ilustração de Dodrio" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4000,7 +4001,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/seel.png" alt="Ilustração de Seel" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/seel.png" alt="Ilustração de Seel" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4044,7 +4045,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/dewgong.png" alt="Ilustração de Dewgong" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/dewgong.png" alt="Ilustração de Dewgong" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4089,7 +4090,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/grimer.png" alt="Ilustração de Grimer" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/grimer.png" alt="Ilustração de Grimer" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4133,7 +4134,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/muk.png" alt="Ilustração de Muk" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/muk.png" alt="Ilustração de Muk" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4177,7 +4178,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/shellder.png" alt="Ilustração de Shellder" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/shellder.png" alt="Ilustração de Shellder" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4221,7 +4222,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/cloyster.png" alt="Ilustração de Cloyster" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/cloyster.png" alt="Ilustração de Cloyster" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4266,7 +4267,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/gastly.png" alt="Ilustração de Gastly" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/gastly.png" alt="Ilustração de Gastly" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4312,7 +4313,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/haunter.png" alt="Ilustração de Haunter" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/haunter.png" alt="Ilustração de Haunter" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4358,7 +4359,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/gengar.png" alt="Ilustração de Gengar" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/gengar.png" alt="Ilustração de Gengar" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4404,7 +4405,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/onix.png" alt="Ilustração de Onix" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/onix.png" alt="Ilustração de Onix" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4448,7 +4449,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/drowzee.png" alt="Ilustração de Drowzee" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/drowzee.png" alt="Ilustração de Drowzee" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4492,7 +4493,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/hypno.png" alt="Ilustração de Hypno" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/hypno.png" alt="Ilustração de Hypno" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4536,7 +4537,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/krabby.png" alt="Ilustração de Krabby" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/krabby.png" alt="Ilustração de Krabby" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4580,7 +4581,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/kingler.png" alt="Ilustração de Kingler" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/kingler.png" alt="Ilustração de Kingler" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4624,7 +4625,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/voltorb.png" alt="Ilustração de Voltorb" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/voltorb.png" alt="Ilustração de Voltorb" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4683,7 +4684,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/electrode.png" alt="Ilustração de Electrode" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/electrode.png" alt="Ilustração de Electrode" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4727,7 +4728,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/exeggcute.png" alt="Ilustração de Exeggcute" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/exeggcute.png" alt="Ilustração de Exeggcute" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4772,7 +4773,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/exeggutor.png" alt="Ilustração de Exeggutor" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/exeggutor.png" alt="Ilustração de Exeggutor" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4817,7 +4818,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/cubone.png" alt="Ilustração de Cubone" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/cubone.png" alt="Ilustração de Cubone" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4861,7 +4862,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/marowak.png" alt="Ilustração de Marowak" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/marowak.png" alt="Ilustração de Marowak" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4905,7 +4906,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/hitmonlee.png" alt="Ilustração de Hitmonlee" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/hitmonlee.png" alt="Ilustração de Hitmonlee" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4948,7 +4949,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/hitmonchan.png" alt="Ilustração de Hitmonchan" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/hitmonchan.png" alt="Ilustração de Hitmonchan" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -4991,7 +4992,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/lickitung.png" alt="Ilustração de Lickitung" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/lickitung.png" alt="Ilustração de Lickitung" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5034,7 +5035,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/koffing.png" alt="Ilustração de Koffing" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/koffing.png" alt="Ilustração de Koffing" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5078,7 +5079,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/weezing.png" alt="Ilustração de Weezing" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/weezing.png" alt="Ilustração de Weezing" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5122,7 +5123,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/rhyhorn.png" alt="Ilustração de Rhyhorn" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/rhyhorn.png" alt="Ilustração de Rhyhorn" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5167,7 +5168,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/rhydon.png" alt="Ilustração de Rhydon" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/rhydon.png" alt="Ilustração de Rhydon" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5212,7 +5213,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/chansey.png" alt="Ilustração de Chansey" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/chansey.png" alt="Ilustração de Chansey" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5255,7 +5256,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/tangela.png" alt="Ilustração de Tangela" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/tangela.png" alt="Ilustração de Tangela" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5298,7 +5299,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/kangaskhan.png" alt="Ilustração de Kangaskhan" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/kangaskhan.png" alt="Ilustração de Kangaskhan" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5341,7 +5342,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/horsea.png" alt="Ilustração de Horsea" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/horsea.png" alt="Ilustração de Horsea" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5385,7 +5386,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/seadra.png" alt="Ilustração de Seadra" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/seadra.png" alt="Ilustração de Seadra" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5429,7 +5430,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/goldeen.png" alt="Ilustração de Goldeen" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/goldeen.png" alt="Ilustração de Goldeen" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5473,7 +5474,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/seaking.png" alt="Ilustração de Seaking" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/seaking.png" alt="Ilustração de Seaking" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5517,7 +5518,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/staryu.png" alt="Ilustração de Staryu" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/staryu.png" alt="Ilustração de Staryu" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5561,7 +5562,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/starmie.png" alt="Ilustração de Starmie" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/starmie.png" alt="Ilustração de Starmie" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5606,7 +5607,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/mr_mime.png" alt="Ilustração de Mr. Mime" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/mr_mime.png" alt="Ilustração de Mr. Mime" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5649,7 +5650,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/scyter.png" alt="Ilustração de Scyther" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/scyter.png" alt="Ilustração de Scyther" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5693,7 +5694,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/jynx.png" alt="Ilustração de Jynx" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/jynx.png" alt="Ilustração de Jynx" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5737,7 +5738,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/electabuzz.png" alt="Ilustração de Electabuzz" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/electabuzz.png" alt="Ilustração de Electabuzz" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5780,7 +5781,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/magmar.png" alt="Ilustração de Magmar" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/magmar.png" alt="Ilustração de Magmar" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5823,7 +5824,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/pinsir.png" alt="Ilustração de Pinsir" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/pinsir.png" alt="Ilustração de Pinsir" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5866,7 +5867,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/tauros.png" alt="Ilustração de Tauros" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/tauros.png" alt="Ilustração de Tauros" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5909,7 +5910,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/magikarp.png" alt="Ilustração de Magikarp" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/magikarp.png" alt="Ilustração de Magikarp" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5953,7 +5954,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/gyarados.png" alt="Ilustração de Gyarados" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/gyarados.png" alt="Ilustração de Gyarados" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -5998,7 +5999,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/lapras.png" alt="Ilustração de Lapras" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/lapras.png" alt="Ilustração de Lapras" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6042,7 +6043,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/ditto.png" alt="Ilustração de Ditto" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/ditto.png" alt="Ilustração de Ditto" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6085,7 +6086,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/eevee.png" alt="Ilustração de Eevee" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/eevee.png" alt="Ilustração de Eevee" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6131,7 +6132,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/vaporeon.png" alt="Ilustração de Vaporeon" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/vaporeon.png" alt="Ilustração de Vaporeon" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6177,7 +6178,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/jolteon.png" alt="Ilustração de Jolteon" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/jolteon.png" alt="Ilustração de Jolteon" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6223,7 +6224,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/flareon.png" alt="Ilustração de Flareon" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/flareon.png" alt="Ilustração de Flareon" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6269,7 +6270,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/porygon.png" alt="Ilustração de Porygon" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/porygon.png" alt="Ilustração de Porygon" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6312,7 +6313,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/omanyte.png" alt="Ilustração de Omanyte" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/omanyte.png" alt="Ilustração de Omanyte" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6357,7 +6358,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/omastar.png" alt="Ilustração de Omastar" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/omastar.png" alt="Ilustração de Omastar" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6402,7 +6403,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/kabuto.png" alt="Ilustração de Kabuto" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/kabuto.png" alt="Ilustração de Kabuto" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6447,7 +6448,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/kabutops.png" alt="Ilustração de Kabutops" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/kabutops.png" alt="Ilustração de Kabutops" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6492,7 +6493,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/aerodactyl.png" alt="Ilustração de Aerodactyl" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/aerodactyl.png" alt="Ilustração de Aerodactyl" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6536,7 +6537,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/snorlax.png" alt="Ilustração de Snorlax" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/snorlax.png" alt="Ilustração de Snorlax" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6579,7 +6580,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/articuno.png" alt="Ilustração de Articuno" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/articuno.png" alt="Ilustração de Articuno" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6623,7 +6624,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/zapdos.png" alt="Ilustração de Zapdos" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/zapdos.png" alt="Ilustração de Zapdos" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6667,7 +6668,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/moltres.png" alt="Ilustração de Moltres" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/moltres.png" alt="Ilustração de Moltres" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6711,7 +6712,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/dratini.png" alt="Ilustração de Dratini" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/dratini.png" alt="Ilustração de Dratini" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6756,7 +6757,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/dragonair.png" alt="Ilustração de Dragonair" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/dragonair.png" alt="Ilustração de Dragonair" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6801,7 +6802,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/dragonite.png" alt="Ilustração de Dragonite" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/dragonite.png" alt="Ilustração de Dragonite" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6847,7 +6848,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/mewtwo.png" alt="Ilustração de Mewtwo" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/mewtwo.png" alt="Ilustração de Mewtwo" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->
@@ -6890,7 +6891,7 @@
                                 <summary>
                                     <figure class="card-image">
                                         <!-- (Imagem dos arquivos) -->
-                                        <img src="../imagens/mew.png" alt="Ilustração de Mew" width="150" height="150" loading="lazy" />
+                                        <img src="../imagens/mew.png" alt="Ilustração de Mew" width="150" height="150" loading="lazy">
                                     </figure>
                                     <header class="card-content">
                                         <!-- (Informações do Pokémon) -->

@@ -1,25 +1,26 @@
 <!doctype html>
 <html lang="pt-br" class="has-navbar-fixed-top">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../CSS/index.css" />
-    <link rel="icon" type="image/svg+xml" href="../imagens/favicon.svg" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="icon" type="image/svg+xml" href="../imagens/favicon.svg">
     <title>Poképédia</title>
+      <script src="../JS/navbar.js" defer></script>
   </head>
   <body>
-    <!-- INÍCIO DA NAVBAR: mantida sem alterações -->
+    <!-- NAVEGAÇÃO PRINCIPAL: logo e links para as páginas do site. -->
     <nav class="navbar is-fixed-top is-light">
       <div class="navbar-brand">
         <a class="navbar-item" href="./index.html">
-          <img src="../imagens/logo.svg" alt="Poképédia" />
+          <img src="../imagens/logo.svg" alt="Poképédia">
         </a>
-        <div class="navbar-burger js-burger" data-target="navbarExampleTransparentExample">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <button type="button" class="navbar-burger" data-target="navbarExampleTransparentExample" aria-controls="navbarExampleTransparentExample" aria-label="Abrir menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
       </div>
 
       <div id="navbarExampleTransparentExample" class="navbar-menu">
@@ -34,7 +35,7 @@
     </nav>
     <!-- FIM DA NAVBAR -->
 
-    <!-- Banner principal -->
+    <!-- BANNER: título, apresentação curta e imagem de abertura da Poképédia. -->
     <header id="topo" class="hero">
       <div class="hero-body">
         <div class="container">
@@ -54,8 +55,7 @@
             <div class="column is-6">
               <img
                 src="../imagens/banner-index.svg"
-                alt="Banner da Poképédia, sua pokédex da 1ª geração com os 151 Pokémon de Kanto"
-              />
+                alt="Banner da Poképédia, sua pokédex da 1ª geração com os 151 Pokémon de Kanto">
             </div>
           </div>
         </div>
@@ -63,7 +63,7 @@
     </header>
 
     <main>
-      <!-- Sobre a Poképédia -->
+      <!-- SOBRE: explica o objetivo do site e apresenta a imagem da Pokédex. -->
       <section id="sobre" class="section">
         <div class="container">
           <div class="columns is-vcentered">
@@ -96,7 +96,7 @@
         </div>
       </section>
 
-      <!-- Pokémon em destaque -->
+      <!-- DESTAQUES: quatro cards com imagem, tipos, resumo e link para o Pokémon na Pokédex. -->
       <section id="destaques" class="section">
         <div class="container">
           <h2 class="title is-2 has-text-centered has-text-link">Pokémon em destaque</h2>
@@ -104,7 +104,7 @@
           <p class="subtitle has-text-centered">Conheça alguns dos Pokémon mais famosos de Kanto!</p>
 
           <div class="columns is-multiline">
-            <!-- Pikachu -->
+            <!-- CARD DO PIKACHU: a imagem parada e o GIF ficam sobrepostos; o CSS alterna qual aparece no hover. -->
             <div class="column is-6-tablet is-3-desktop">
               <article class="card">
                 <div class="card-image fundo-amarelo">
@@ -112,9 +112,8 @@
                     <img
                       class="pokemon-img"
                       src="../imagens/pikachu.png"
-                      data-hover-gif="../imagens/pikachu-hover.gif"
-                      alt="Pikachu, Pokémon rato amarelo com bochechas vermelhas"
-                    />
+                      alt="Pikachu, Pokémon rato amarelo com bochechas vermelhas">
+                    <img class="pokemon-gif" src="../imagens/pikachu-hover.gif" alt="" aria-hidden="true">
                   </figure>
                 </div>
 
@@ -128,12 +127,12 @@
                     sente ameaçado.
                   </p>
 
-                  <a href="./pokedex.html#pikachu" data-pokemon-audio="../audios/pikachu.mp3" class="button is-warning is-fullwidth mt-4"> Ver mais </a>
+                  <a href="./pokedex.html#Pikachu" class="button is-warning is-fullwidth mt-4"> Ver mais </a>
                 </div>
               </article>
             </div>
 
-            <!-- Bulbasaur -->
+            <!-- CARD DO BULBASAUR: repete o mesmo modelo do Pikachu, com dois tipos. -->
             <div class="column is-6-tablet is-3-desktop">
               <article class="card">
                 <div class="card-image fundo-verde">
@@ -141,9 +140,8 @@
                     <img
                       class="pokemon-img"
                       src="../imagens/bulbasaur.png"
-                      data-hover-gif="../imagens/bulbasaur-hover.gif"
-                      alt="Bulbasaur, Pokémon verde com um bulbo nas costas"
-                    />
+                      alt="Bulbasaur, Pokémon verde com um bulbo nas costas">
+                    <img class="pokemon-gif" src="../imagens/bulbasaur-hover.gif" alt="" aria-hidden="true">
                   </figure>
                 </div>
 
@@ -160,12 +158,12 @@
                     o nascimento. Ela cresce junto com ele, e é um ótimo inicial para quem está começando a jornada.
                   </p>
 
-                  <a href="./pokedex.html#bulbasaur" data-pokemon-audio="../audios/bulbasaur.mp3" class="button is-success is-fullwidth mt-4"> Ver mais </a>
+                  <a href="./pokedex.html#Bulbasaur" class="button is-success is-fullwidth mt-4"> Ver mais </a>
                 </div>
               </article>
             </div>
 
-            <!-- Charmander -->
+            <!-- CARD DO CHARMANDER: repete o modelo com o tipo Fogo. -->
             <div class="column is-6-tablet is-3-desktop">
               <article class="card">
                 <div class="card-image fundo-vermelho">
@@ -173,9 +171,8 @@
                     <img
                       class="pokemon-img"
                       src="../imagens/charmander.png"
-                      data-hover-gif="../imagens/charmander-hover.gif"
-                      alt="Charmander, Pokémon laranja com uma chama na ponta da cauda"
-                    />
+                      alt="Charmander, Pokémon laranja com uma chama na ponta da cauda">
+                    <img class="pokemon-gif" src="../imagens/charmander-hover.gif" alt="" aria-hidden="true">
                   </figure>
                 </div>
 
@@ -188,12 +185,12 @@
                     sua saúde e o seu humor. Corajoso e teimoso, evolui para o poderoso Charizard.
                   </p>
 
-                  <a href="./pokedex.html#charmander" data-pokemon-audio="../audios/charmander.mp3" class="button is-danger is-fullwidth mt-4"> Ver mais </a>
+                  <a href="./pokedex.html#Charmander" class="button is-danger is-fullwidth mt-4"> Ver mais </a>
                 </div>
               </article>
             </div>
 
-            <!-- Squirtle -->
+            <!-- CARD DO SQUIRTLE: repete o modelo com o tipo Água. -->
             <div class="column is-6-tablet is-3-desktop">
               <article class="card">
                 <div class="card-image fundo-azul">
@@ -201,9 +198,8 @@
                     <img
                       class="pokemon-img"
                       src="../imagens/squirtle.png"
-                      data-hover-gif="../imagens/squirtle-hover.gif"
-                      alt="Squirtle, Pokémon azul com casco de tartaruga"
-                    />
+                      alt="Squirtle, Pokémon azul com casco de tartaruga">
+                    <img class="pokemon-gif" src="../imagens/squirtle-hover.gif" alt="" aria-hidden="true">
                   </figure>
                 </div>
 
@@ -216,7 +212,7 @@
                     jatos de água precisos e é um inicial equilibrado, tanto no ataque quanto na defesa.
                   </p>
 
-                  <a href="./pokedex.html#squirtle" data-pokemon-audio="../audios/squirtle.mp3" class="button is-info is-fullwidth mt-4"> Ver mais </a>
+                  <a href="./pokedex.html#Squirtle" class="button is-info is-fullwidth mt-4"> Ver mais </a>
                 </div>
               </article>
             </div>
@@ -224,7 +220,7 @@
         </div>
       </section>
 
-      <!-- Curiosidades -->
+      <!-- CURIOSIDADES: cada caixa apresenta um fato numerado sobre a primeira geração. -->
       <section id="curiosidades" class="section">
         <div class="container">
           <h2 class="title is-2 has-text-centered has-text-link">Curiosidades da 1ª geração</h2>
@@ -295,7 +291,7 @@
         </div>
       </section>
 
-      <!-- Você sabia? -->
+      <!-- VOCÊ SABIA?: artigos curtos com fatos complementares sobre Pokémon. -->
       <aside id="voce-sabia" class="section">
         <div class="container">
           <h2 class="title is-2 has-text-centered has-text-link">Você sabia?</h2>
@@ -354,7 +350,7 @@
         </div>
       </aside>
 
-      <!-- Abertura -->
+      <!-- ABERTURA: incorpora o vídeo e exibe sua legenda. -->
       <section id="abertura" class="section">
         <div class="container">
           <h2 class="title is-2 has-text-centered has-text-link">Relembre a abertura</h2>
@@ -386,7 +382,7 @@
       </section>
     </main>
 
-    <!-- Rodapé -->
+    <!-- RODAPÉ: créditos do trabalho, aviso sobre marcas e atalho para o topo. -->
     <footer id="rodape" class="footer has-text-centered">
       <div class="container">
         <section>
@@ -413,35 +409,5 @@
         <a href="#topo" class="button is-warning mt-4"> Voltar ao topo </a>
       </div>
     </footer>
-    <script>
-      document.querySelectorAll(".pokemon-img[data-hover-gif]").forEach((pokemon) => {
-        const imagemParada = pokemon.src;
-        const gifAnimado = pokemon.dataset.hoverGif;
-
-        pokemon.addEventListener("mouseenter", () => {
-          pokemon.src = gifAnimado;
-        });
-
-        pokemon.addEventListener("mouseleave", () => {
-          pokemon.src = imagemParada;
-        });
-      });
-
-      const vozPokemon = new Audio();
-      document.querySelectorAll("a[data-pokemon-audio]").forEach((botao) => {
-        botao.addEventListener("click", (event) => {
-          event.preventDefault();
-          const destino = botao.href;
-          const abrirPokédex = () => window.location.assign(destino);
-
-          vozPokemon.pause();
-          vozPokemon.src = botao.dataset.pokemonAudio;
-          vozPokemon.currentTime = 0;
-          vozPokemon.onended = abrirPokédex;
-          vozPokemon.onerror = abrirPokédex;
-          vozPokemon.play().catch(abrirPokédex);
-        });
-      });
-    </script>
   </body>
 </html>
