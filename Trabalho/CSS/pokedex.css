@@ -186,15 +186,15 @@ main > nav.tabs:not(:last-child) {
     object-fit: contain; /* Mostra a imagem inteira dentro da área, sem cortar nem distorcer. */
 }
 
-.card-pokemon .card-content { /* ---- Textos do card ---- */
+.card-pokemon .card-content {
+    display: block; /* Era <header>, que já é bloco; agora é <span>. */
     flex: 1;
     padding: 1rem 1.25rem 0.5rem;
 }
 
-.card-pokemon .numero { /* Número do Pokémon (#001): pequeno, em negrito e em cinza-azulado. */
-    font-size: 0.85rem;
-    font-weight: bold;
-    color: #53647e;
+.card-pokemon .numero,
+.card-pokemon .card-content .title {
+    display: block; /* Número e nome em linhas separadas. */
 }
 
 /* ==============================
@@ -222,7 +222,7 @@ main > nav.tabs:not(:last-child) {
     border-top: 1px solid #e2e8f0; /* Linha fina separando o card das informações adicionais. */
 }
 
-.detalhes h4 {
+.detalhes h3 {
     margin: 0.75rem 0 0.4rem; /* Espaço de 0,75rem acima do subtítulo e 0,4rem abaixo, para ficar perto do texto dele. */
     font-weight: bold;
     color: #19375f; /* Azul-marinho, igual aos outros títulos do site. */
@@ -327,21 +327,21 @@ main > nav.tabs:not(:last-child) {
 /* ======================================
      COR DA FAIXA DO CARD CONFORME O TIPO 
    =======================================*/
-.card-pokemon:has(.tipos > li:first-child.tipo-normal) .card-image   { background-color: #eceae1; }
-.card-pokemon:has(.tipos > li:first-child.tipo-fogo) .card-image     { background-color: #ffd8d2; }
-.card-pokemon:has(.tipos > li:first-child.tipo-agua) .card-image     { background-color: #d7efff; }
-.card-pokemon:has(.tipos > li:first-child.tipo-eletrico) .card-image { background-color: #fff2b3; }
-.card-pokemon:has(.tipos > li:first-child.tipo-planta) .card-image   { background-color: #d8f2d0; }
-.card-pokemon:has(.tipos > li:first-child.tipo-gelo) .card-image     { background-color: #d9f3f3; }
-.card-pokemon:has(.tipos > li:first-child.tipo-lutador) .card-image  { background-color: #f6d3cf; }
-.card-pokemon:has(.tipos > li:first-child.tipo-veneno) .card-image   { background-color: #e8d9f2; }
-.card-pokemon:has(.tipos > li:first-child.tipo-terra) .card-image    { background-color: #f1e5c3; }
-.card-pokemon:has(.tipos > li:first-child.tipo-voador) .card-image   { background-color: #e3dcf8; }
-.card-pokemon:has(.tipos > li:first-child.tipo-psiquico) .card-image { background-color: #fcd9e5; }
-.card-pokemon:has(.tipos > li:first-child.tipo-inseto) .card-image   { background-color: #e6edc4; }
-.card-pokemon:has(.tipos > li:first-child.tipo-pedra) .card-image    { background-color: #e8dfb8; }
-.card-pokemon:has(.tipos > li:first-child.tipo-fantasma) .card-image { background-color: #dcd3ea; }
-.card-pokemon:has(.tipos > li:first-child.tipo-dragao) .card-image   { background-color: #d9ccfa; }
+.card-pokemon:has(.tipos > .tag:first-child.tipo-normal) .card-image   { background-color: #eceae1; }
+.card-pokemon:has(.tipos > .tag:first-child.tipo-fogo) .card-image     { background-color: #ffd8d2; }
+.card-pokemon:has(.tipos > .tag:first-child.tipo-agua) .card-image     { background-color: #d7efff; }
+.card-pokemon:has(.tipos > .tag:first-child.tipo-eletrico) .card-image { background-color: #fff2b3; }
+.card-pokemon:has(.tipos > .tag:first-child.tipo-planta) .card-image   { background-color: #d8f2d0; }
+.card-pokemon:has(.tipos > .tag:first-child.tipo-gelo) .card-image     { background-color: #d9f3f3; }
+.card-pokemon:has(.tipos > .tag:first-child.tipo-lutador) .card-image  { background-color: #f6d3cf; }
+.card-pokemon:has(.tipos > .tag:first-child.tipo-veneno) .card-image   { background-color: #e8d9f2; }
+.card-pokemon:has(.tipos > .tag:first-child.tipo-terra) .card-image    { background-color: #f1e5c3; }
+.card-pokemon:has(.tipos > .tag:first-child.tipo-voador) .card-image   { background-color: #e3dcf8; }
+.card-pokemon:has(.tipos > .tag:first-child.tipo-psiquico) .card-image { background-color: #fcd9e5; }
+.card-pokemon:has(.tipos > .tag:first-child.tipo-inseto) .card-image   { background-color: #e6edc4; }
+.card-pokemon:has(.tipos > .tag:first-child.tipo-pedra) .card-image    { background-color: #e8dfb8; }
+.card-pokemon:has(.tipos > .tag:first-child.tipo-fantasma) .card-image { background-color: #dcd3ea; }
+.card-pokemon:has(.tipos > .tag:first-child.tipo-dragao) .card-image   { background-color: #d9ccfa; }
 
 /* ======================
      ETIQUETAS DE TIPO
@@ -570,7 +570,7 @@ main:has(#filtro-dragao:checked) .lista-pokemon > li:has(.tipos > .tipo-dragao) 
         font-size: 0.8rem;
     }
 
-    .detalhes h4 { /* Subtítulos menores. */
+    .detalhes h3 { /* Subtítulos menores. */
         font-size: 0.85rem;
     }
 
